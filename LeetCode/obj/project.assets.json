@@ -6716,17 +6716,17 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Code\\DotNetCore\\LeetCode\\LeetCode\\LeetCode\\LeetCode.csproj",
+      "projectUniqueName": "d:\\Code\\DotNetCore\\LeetCode\\LeetCode\\LeetCode.csproj",
       "projectName": "LeetCode",
-      "projectPath": "d:\\Code\\DotNetCore\\LeetCode\\LeetCode\\LeetCode\\LeetCode.csproj",
+      "projectPath": "d:\\Code\\DotNetCore\\LeetCode\\LeetCode\\LeetCode.csproj",
       "packagesPath": "C:\\Users\\cxh\\.nuget\\packages\\",
-      "outputPath": "d:\\Code\\DotNetCore\\LeetCode\\LeetCode\\LeetCode\\obj\\",
+      "outputPath": "d:\\Code\\DotNetCore\\LeetCode\\LeetCode\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "d:\\Code\\DotNetCore\\LeetCode\\LeetCode\\LeetCode\\NuGet.Config",
+        "d:\\Code\\DotNetCore\\LeetCode\\LeetCode\\NuGet.Config",
         "C:\\Users\\cxh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
