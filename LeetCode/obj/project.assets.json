@@ -1,17 +1,44 @@
 {
-  "locked": false,
-  "version": 2,
+  "version": 3,
   "targets": {
     ".NETCoreApp,Version=v1.0": {
-      "Libuv/1.9.0": {
+      "Libuv/1.9.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.0.1"
         },
         "runtimeTargets": {
-          "runtimes/osx/native/_._": {
+          "runtimes/debian-x64/native/libuv.so": {
+            "assetType": "native",
+            "rid": "debian-x64"
+          },
+          "runtimes/fedora-x64/native/libuv.so": {
+            "assetType": "native",
+            "rid": "fedora-x64"
+          },
+          "runtimes/opensuse-x64/native/libuv.so": {
+            "assetType": "native",
+            "rid": "opensuse-x64"
+          },
+          "runtimes/osx/native/libuv.dylib": {
             "assetType": "native",
             "rid": "osx"
+          },
+          "runtimes/rhel-x64/native/libuv.so": {
+            "assetType": "native",
+            "rid": "rhel-x64"
+          },
+          "runtimes/win7-arm/native/libuv.dll": {
+            "assetType": "native",
+            "rid": "win7-arm"
+          },
+          "runtimes/win7-x64/native/libuv.dll": {
+            "assetType": "native",
+            "rid": "win7-x64"
+          },
+          "runtimes/win7-x86/native/libuv.dll": {
+            "assetType": "native",
+            "rid": "win7-x86"
           }
         }
       },
@@ -65,7 +92,7 @@
           "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp/1.3.0": {
@@ -77,7 +104,7 @@
           "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.VisualBasic/1.3.0": {
@@ -89,7 +116,7 @@
           "lib/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.CodeAnalysis.VisualBasic.dll": {}
         }
       },
       "Microsoft.CSharp/4.0.1": {
@@ -116,18 +143,19 @@
           "ref/netstandard1.0/Microsoft.CSharp.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.NETCore.App/1.0.0": {
+      "Microsoft.NETCore.App/1.0.4": {
         "type": "package",
         "dependencies": {
-          "Libuv": "1.9.0",
+          "Libuv": "1.9.1",
           "Microsoft.CSharp": "4.0.1",
           "Microsoft.CodeAnalysis.CSharp": "1.3.0",
           "Microsoft.CodeAnalysis.VisualBasic": "1.3.0",
-          "Microsoft.NETCore.DotNetHostPolicy": "1.0.1",
-          "Microsoft.NETCore.Runtime.CoreCLR": "1.0.2",
+          "Microsoft.NETCore.DotNetHostPolicy": "1.0.3",
+          "Microsoft.NETCore.Platforms": "1.0.2",
+          "Microsoft.NETCore.Runtime.CoreCLR": "1.0.6",
           "Microsoft.VisualBasic": "10.0.1",
           "NETStandard.Library": "1.6.0",
           "System.Buffers": "4.0.0",
@@ -141,9 +169,10 @@
           "System.IO.FileSystem.Watcher": "4.0.0",
           "System.IO.MemoryMappedFiles": "4.0.0",
           "System.IO.UnmanagedMemoryStream": "4.0.1",
-          "System.Linq.Expressions": "4.1.0",
+          "System.Linq.Expressions": "4.1.1",
           "System.Linq.Parallel": "4.0.1",
           "System.Linq.Queryable": "4.0.1",
+          "System.Net.Http": "4.1.1",
           "System.Net.NameResolution": "4.0.0",
           "System.Net.Requests": "4.0.11",
           "System.Net.Security": "4.0.0",
@@ -174,7 +203,7 @@
       "Microsoft.NETCore.DotNetHost/1.0.1": {
         "type": "package"
       },
-      "Microsoft.NETCore.DotNetHostPolicy/1.0.1": {
+      "Microsoft.NETCore.DotNetHostPolicy/1.0.3": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.DotNetHostResolver": "1.0.1"
@@ -186,10 +215,10 @@
           "Microsoft.NETCore.DotNetHost": "1.0.1"
         }
       },
-      "Microsoft.NETCore.Jit/1.0.2": {
+      "Microsoft.NETCore.Jit/1.0.6": {
         "type": "package"
       },
-      "Microsoft.NETCore.Platforms/1.0.1": {
+      "Microsoft.NETCore.Platforms/1.0.2": {
         "type": "package",
         "compile": {
           "lib/netstandard1.0/_._": {}
@@ -198,10 +227,10 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.NETCore.Runtime.CoreCLR/1.0.2": {
+      "Microsoft.NETCore.Runtime.CoreCLR/1.0.6": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Jit": "1.0.2",
+          "Microsoft.NETCore.Jit": "1.0.6",
           "Microsoft.NETCore.Windows.ApiSets": "1.0.1"
         }
       },
@@ -241,7 +270,7 @@
           "ref/netstandard1.1/Microsoft.VisualBasic.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/Microsoft.VisualBasic.dll": {}
         }
       },
       "Microsoft.Win32.Primitives/4.0.1": {
@@ -271,7 +300,11 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/Microsoft.Win32.Registry.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -400,7 +433,7 @@
           "ref/netstandard1.6/System.AppContext.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/_._": {}
+          "lib/netstandard1.6/System.AppContext.dll": {}
         }
       },
       "System.Buffers/4.0.0": {
@@ -416,7 +449,7 @@
           "lib/netstandard1.1/System.Buffers.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/_._": {}
+          "lib/netstandard1.1/System.Buffers.dll": {}
         }
       },
       "System.Collections/4.0.11": {
@@ -448,7 +481,7 @@
           "ref/netstandard1.3/System.Collections.Concurrent.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
         }
       },
       "System.Collections.Immutable/1.2.0": {
@@ -467,7 +500,7 @@
           "lib/netstandard1.0/System.Collections.Immutable.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/System.Collections.Immutable.dll": {}
         }
       },
       "System.ComponentModel/4.0.1": {
@@ -479,7 +512,7 @@
           "ref/netstandard1.0/System.ComponentModel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.ComponentModel.dll": {}
         }
       },
       "System.ComponentModel.Annotations/4.1.0": {
@@ -501,7 +534,7 @@
           "ref/netstandard1.4/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.4/_._": {}
+          "lib/netstandard1.4/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.Console/4.0.0": {
@@ -541,7 +574,7 @@
           "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll": {}
         }
       },
       "System.Diagnostics.FileVersionInfo/4.0.0": {
@@ -561,7 +594,11 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Diagnostics.FileVersionInfo.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Diagnostics.FileVersionInfo.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -596,9 +633,17 @@
           "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/osx/lib/netstandard1.4/_._": {
+          "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll": {
             "assetType": "runtime",
             "rid": "osx"
+          },
+          "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "win"
           }
         }
       },
@@ -616,7 +661,7 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
         }
       },
       "System.Diagnostics.Tools/4.0.1": {
@@ -664,7 +709,7 @@
           "ref/netstandard1.3/System.Dynamic.Runtime.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Dynamic.Runtime.dll": {}
         }
       },
       "System.Globalization/4.0.11": {
@@ -704,7 +749,11 @@
           "ref/netstandard1.3/System.Globalization.Extensions.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Globalization.Extensions.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Globalization.Extensions.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -745,7 +794,11 @@
           "ref/netstandard1.3/System.IO.Compression.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.IO.Compression.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.IO.Compression.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -768,7 +821,7 @@
           "ref/netstandard1.3/System.IO.Compression.ZipFile.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.IO.Compression.ZipFile.dll": {}
         }
       },
       "System.IO.FileSystem/4.0.1": {
@@ -796,7 +849,7 @@
           "ref/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.IO.FileSystem.Primitives.dll": {}
         }
       },
       "System.IO.FileSystem.Watcher/4.0.0": {
@@ -823,9 +876,17 @@
           "ref/netstandard1.3/System.IO.FileSystem.Watcher.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/osx/lib/netstandard1.3/_._": {
+          "runtimes/linux/lib/netstandard1.3/System.IO.FileSystem.Watcher.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard1.3/System.IO.FileSystem.Watcher.dll": {
             "assetType": "runtime",
             "rid": "osx"
+          },
+          "runtimes/win/lib/netstandard1.3/System.IO.FileSystem.Watcher.dll": {
+            "assetType": "runtime",
+            "rid": "win"
           }
         }
       },
@@ -850,7 +911,11 @@
           "ref/netstandard1.3/System.IO.MemoryMappedFiles.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.IO.MemoryMappedFiles.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.IO.MemoryMappedFiles.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -871,7 +936,7 @@
           "ref/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.IO.UnmanagedMemoryStream.dll": {}
         }
       },
       "System.Linq/4.1.0": {
@@ -887,10 +952,10 @@
           "ref/netstandard1.6/System.Linq.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/_._": {}
+          "lib/netstandard1.6/System.Linq.dll": {}
         }
       },
-      "System.Linq.Expressions/4.1.0": {
+      "System.Linq.Expressions/4.1.1": {
         "type": "package",
         "dependencies": {
           "System.Collections": "4.0.11",
@@ -915,7 +980,7 @@
           "ref/netstandard1.6/System.Linq.Expressions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/_._": {}
+          "lib/netstandard1.6/System.Linq.Expressions.dll": {}
         }
       },
       "System.Linq.Parallel/4.0.1": {
@@ -936,7 +1001,7 @@
           "ref/netstandard1.1/System.Linq.Parallel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
       "System.Linq.Queryable/4.0.1": {
@@ -955,13 +1020,13 @@
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Linq.Queryable.dll": {}
         }
       },
-      "System.Net.Http/4.1.0": {
+      "System.Net.Http/4.1.1": {
         "type": "package",
         "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.0.1",
+          "Microsoft.NETCore.Platforms": "1.0.2",
           "System.Collections": "4.0.11",
           "System.Diagnostics.Debug": "4.0.11",
           "System.Diagnostics.DiagnosticSource": "4.0.0",
@@ -992,7 +1057,11 @@
           "ref/netstandard1.3/System.Net.Http.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Http.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1020,7 +1089,11 @@
           "ref/netstandard1.3/System.Net.NameResolution.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Net.NameResolution.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.NameResolution.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1059,7 +1132,11 @@
           "ref/netstandard1.3/System.Net.Requests.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Net.Requests.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Requests.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1101,7 +1178,11 @@
           "ref/netstandard1.3/System.Net.Security.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Net.Security.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Net.Security.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1133,7 +1214,7 @@
           "ref/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Net.WebHeaderCollection.dll": {}
         }
       },
       "System.Numerics.Vectors/4.1.1": {
@@ -1148,7 +1229,7 @@
           "ref/netstandard1.0/System.Numerics.Vectors.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/System.Numerics.Vectors.dll": {}
         }
       },
       "System.ObjectModel/4.0.12": {
@@ -1164,7 +1245,7 @@
           "ref/netstandard1.3/System.ObjectModel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.ObjectModel.dll": {}
         }
       },
       "System.Reflection/4.1.0": {
@@ -1198,7 +1279,7 @@
           "ref/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Reflection.DispatchProxy.dll": {}
         }
       },
       "System.Reflection.Emit/4.0.1": {
@@ -1214,7 +1295,7 @@
           "ref/netstandard1.1/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Reflection.Emit.dll": {}
         }
       },
       "System.Reflection.Emit.ILGeneration/4.0.1": {
@@ -1228,7 +1309,7 @@
           "ref/netstandard1.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Reflection.Emit.ILGeneration.dll": {}
         }
       },
       "System.Reflection.Emit.Lightweight/4.0.1": {
@@ -1243,7 +1324,7 @@
           "ref/netstandard1.0/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
         }
       },
       "System.Reflection.Extensions/4.0.1": {
@@ -1281,7 +1362,7 @@
           "lib/netstandard1.1/System.Reflection.Metadata.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/_._": {}
+          "lib/netstandard1.1/System.Reflection.Metadata.dll": {}
         }
       },
       "System.Reflection.Primitives/4.0.1": {
@@ -1305,7 +1386,7 @@
           "ref/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.5/_._": {}
+          "lib/netstandard1.5/System.Reflection.TypeExtensions.dll": {}
         }
       },
       "System.Resources.Reader/4.0.0": {
@@ -1321,7 +1402,7 @@
           "lib/netstandard1.0/System.Resources.Reader.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/System.Resources.Reader.dll": {}
         }
       },
       "System.Resources.ResourceManager/4.0.1": {
@@ -1398,7 +1479,11 @@
           "ref/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.1/_._": {
+          "runtimes/unix/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.1/System.Runtime.InteropServices.RuntimeInformation.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1415,7 +1500,7 @@
           "ref/netstandard1.5/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.5/_._": {}
+          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
         }
       },
       "System.Runtime.Numerics/4.0.1": {
@@ -1430,7 +1515,7 @@
           "ref/netstandard1.1/System.Runtime.Numerics.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
       "System.Security.Claims/4.0.1": {
@@ -1448,7 +1533,7 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Security.Claims.dll": {}
         }
       },
       "System.Security.Cryptography.Algorithms/4.2.0": {
@@ -1472,7 +1557,11 @@
           "ref/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.6/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Algorithms.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1497,7 +1586,11 @@
           "ref/netstandard1.6/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.6/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Cng.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1524,7 +1617,11 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Csp.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1550,7 +1647,11 @@
           "ref/netstandard1.3/System.Security.Cryptography.Encoding.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.Encoding.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1577,10 +1678,10 @@
           "ref/netstandard1.6/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.6/_._": {}
+          "lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.6/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.OpenSsl.dll": {
             "assetType": "runtime",
             "rid": "unix"
           }
@@ -1601,7 +1702,7 @@
           "ref/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Security.Cryptography.Primitives.dll": {}
         }
       },
       "System.Security.Cryptography.X509Certificates/4.1.0": {
@@ -1637,7 +1738,11 @@
           "ref/netstandard1.4/System.Security.Cryptography.X509Certificates.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.6/_._": {
+          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.X509Certificates.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1652,7 +1757,7 @@
           "ref/netstandard1.0/System.Security.Principal.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/System.Security.Principal.dll": {}
         }
       },
       "System.Security.Principal.Windows/4.0.0": {
@@ -1677,7 +1782,11 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Security.Principal.Windows.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Security.Principal.Windows.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1714,7 +1823,11 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1746,7 +1859,7 @@
           "ref/netstandard1.6/System.Text.RegularExpressions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.6/_._": {}
+          "lib/netstandard1.6/System.Text.RegularExpressions.dll": {}
         }
       },
       "System.Threading/4.0.11": {
@@ -1759,7 +1872,7 @@
           "ref/netstandard1.3/System.Threading.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Threading.dll": {}
         }
       },
       "System.Threading.Overlapped/4.0.1": {
@@ -1774,7 +1887,11 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/netstandard1.3/_._": {
+          "runtimes/unix/lib/netstandard1.3/System.Threading.Overlapped.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Threading.Overlapped.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1810,7 +1927,7 @@
           "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.1/_._": {}
+          "lib/netstandard1.1/System.Threading.Tasks.Dataflow.dll": {}
         }
       },
       "System.Threading.Tasks.Extensions/4.0.0": {
@@ -1824,7 +1941,7 @@
           "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.0/_._": {}
+          "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
       "System.Threading.Tasks.Parallel/4.0.1": {
@@ -1843,7 +1960,7 @@
           "ref/netstandard1.1/System.Threading.Tasks.Parallel.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Threading.Tasks.Parallel.dll": {}
         }
       },
       "System.Threading.Thread/4.0.0": {
@@ -1855,7 +1972,7 @@
           "ref/netstandard1.3/System.Threading.Thread.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Threading.Thread.dll": {}
         }
       },
       "System.Threading.ThreadPool/4.0.10": {
@@ -1868,7 +1985,7 @@
           "ref/netstandard1.3/System.Threading.ThreadPool.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
         }
       },
       "System.Threading.Timer/4.0.1": {
@@ -1905,7 +2022,7 @@
           "ref/netstandard1.3/System.Xml.ReaderWriter.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Xml.ReaderWriter.dll": {}
         }
       },
       "System.Xml.XDocument/4.0.11": {
@@ -1928,7 +2045,7 @@
           "ref/netstandard1.3/System.Xml.XDocument.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
       "System.Xml.XmlDocument/4.0.1": {
@@ -1949,7 +2066,7 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
         }
       },
       "System.Xml.XPath/4.0.1": {
@@ -1969,7 +2086,7 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Xml.XPath.dll": {}
         }
       },
       "System.Xml.XPath.XDocument/4.0.1": {
@@ -1989,20 +2106,20 @@
           "ref/netstandard1.3/_._": {}
         },
         "runtime": {
-          "lib/netstandard1.3/_._": {}
+          "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Libuv/1.9.0": {
-      "sha512": "F5GbzfEsJaRfeWUotOEwQVsZAS89D4UkW+B82cIJnE/GPiTYrr0bVYyie30cRJjOr9GrmbU1t9jCMZCv7UoINQ==",
+    "Libuv/1.9.1": {
+      "sha512": "uqX2Frwf9PW8MaY7PRNY6HM5BpW1D8oj1EdqzrmbEFD5nH63Yat3aEjN/tws6Tw6Fk7LwmLBvtUh32tTeTaHiA==",
       "type": "package",
-      "path": "Libuv/1.9.0",
+      "path": "libuv/1.9.1",
       "files": [
-        "Libuv.1.9.0.nupkg.sha512",
-        "Libuv.nuspec",
         "License.txt",
+        "libuv.1.9.1.nupkg.sha512",
+        "libuv.nuspec",
         "runtimes/debian-x64/native/libuv.so",
         "runtimes/fedora-x64/native/libuv.so",
         "runtimes/opensuse-x64/native/libuv.so",
@@ -2016,7 +2133,7 @@
     "Microsoft.CodeAnalysis.Analyzers/1.1.0": {
       "sha512": "DTdV1eCYJlR37sWZ3XpT4MGfEVsikSCrWzHXzANIfC1u6ki7C3Vk3yzJt+cA4fMU8OoZ4fPB+SQQZH72eKhLzA==",
       "type": "package",
-      "path": "Microsoft.CodeAnalysis.Analyzers/1.1.0",
+      "path": "microsoft.codeanalysis.analyzers/1.1.0",
       "files": [
         "Microsoft.CodeAnalysis.Analyzers.1.1.0.nupkg.sha512",
         "Microsoft.CodeAnalysis.Analyzers.nuspec",
@@ -2032,7 +2149,7 @@
     "Microsoft.CodeAnalysis.Common/1.3.0": {
       "sha512": "Xr+5sc/utZzIxvtGefMzSxAvWwBlQrlCWt661ubAb7d5BIfKKhBdFav/OVWdUrKoAYn+PqiHK74UO5WCu5bFfQ==",
       "type": "package",
-      "path": "Microsoft.CodeAnalysis.Common/1.3.0",
+      "path": "microsoft.codeanalysis.common/1.3.0",
       "files": [
         "Microsoft.CodeAnalysis.Common.1.3.0.nupkg.sha512",
         "Microsoft.CodeAnalysis.Common.nuspec",
@@ -2048,7 +2165,7 @@
     "Microsoft.CodeAnalysis.CSharp/1.3.0": {
       "sha512": "1jOjzTeHzBRzeutON+m4DetCGLy/1VPOPVeinPjybovkJ8uf2UMMTMY6GE6yxj5m19cRCNzGbu/utqPCy0CPNw==",
       "type": "package",
-      "path": "Microsoft.CodeAnalysis.CSharp/1.3.0",
+      "path": "microsoft.codeanalysis.csharp/1.3.0",
       "files": [
         "Microsoft.CodeAnalysis.CSharp.1.3.0.nupkg.sha512",
         "Microsoft.CodeAnalysis.CSharp.nuspec",
@@ -2064,7 +2181,7 @@
     "Microsoft.CodeAnalysis.VisualBasic/1.3.0": {
       "sha512": "hEpJqu/KBsHbYItW5dq6f9X9KwbBU9hpsbAW1gv934PCoUAyhqQvMTzetdZYNTN5pK5dJ/HNZxRIfrPRUCKm/Q==",
       "type": "package",
-      "path": "Microsoft.CodeAnalysis.VisualBasic/1.3.0",
+      "path": "microsoft.codeanalysis.visualbasic/1.3.0",
       "files": [
         "Microsoft.CodeAnalysis.VisualBasic.1.3.0.nupkg.sha512",
         "Microsoft.CodeAnalysis.VisualBasic.nuspec",
@@ -2080,7 +2197,7 @@
     "Microsoft.CSharp/4.0.1": {
       "sha512": "nd+PUh3O+CYNvZecy0LFDo5ZFC/ejvL5jvM6ZYReFqQXG2vsA19/SAwi9T6Ws7XhFcT2SWptnFblhd7bK/pU6w==",
       "type": "package",
-      "path": "Microsoft.CSharp/4.0.1",
+      "path": "microsoft.csharp/4.0.1",
       "files": [
         "Microsoft.CSharp.4.0.1.nupkg.sha512",
         "Microsoft.CSharp.nuspec",
@@ -2134,22 +2251,22 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "Microsoft.NETCore.App/1.0.0": {
-      "sha512": "Bv40dLDrT+Igcg1e6otW3D8voeJCfcAxOlsxSVlDz+J+cdWls5kblZvPHHvx7gX3/oJoQVIkEeO3sMyv5PSVJA==",
+    "Microsoft.NETCore.App/1.0.4": {
+      "sha512": "RG6hwo9ifKnbhPeNkp3X+oBE7EoImdRC2ntt+I3iLlhc5WV7DPg5/gNa6OH0qM3BbmRvfsgO0CNTjNU/hrIUbw==",
       "type": "package",
-      "path": "Microsoft.NETCore.App/1.0.0",
+      "path": "microsoft.netcore.app/1.0.4",
       "files": [
-        "Microsoft.NETCore.App.1.0.0.nupkg.sha512",
-        "Microsoft.NETCore.App.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
-        "lib/netcoreapp1.0/_._"
+        "lib/netcoreapp1.0/_._",
+        "microsoft.netcore.app.1.0.4.nupkg.sha512",
+        "microsoft.netcore.app.nuspec"
       ]
     },
     "Microsoft.NETCore.DotNetHost/1.0.1": {
       "sha512": "4/Ksse60A0ad5H8Oc1epZExLt1oe1P7kgTVaOyew2ccMhgxrxVLkWfu/pxD8mWvJfxIiE785CUkFtqJq2et5cw==",
       "type": "package",
-      "path": "Microsoft.NETCore.DotNetHost/1.0.1",
+      "path": "microsoft.netcore.dotnethost/1.0.1",
       "files": [
         "Microsoft.NETCore.DotNetHost.1.0.1.nupkg.sha512",
         "Microsoft.NETCore.DotNetHost.nuspec",
@@ -2158,22 +2275,22 @@
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.DotNetHostPolicy/1.0.1": {
-      "sha512": "j/mj2HWxEiz4MEwT2ifCixwDQ6P7gdBAPdC34gwEBaajsKqwDcPIP1WRqgZvLA94RfsXUcpTwAq51ML0rMHwsw==",
+    "Microsoft.NETCore.DotNetHostPolicy/1.0.3": {
+      "sha512": "emPcHCi96pF2Rqkmya+oqPKVhokXb1VE4ZwtsUNrW5Hn3/ClGJN7wOsi7xvuNurR1JGZd2hQFwDUUjJqW1cunA==",
       "type": "package",
-      "path": "Microsoft.NETCore.DotNetHostPolicy/1.0.1",
+      "path": "microsoft.netcore.dotnethostpolicy/1.0.3",
       "files": [
-        "Microsoft.NETCore.DotNetHostPolicy.1.0.1.nupkg.sha512",
-        "Microsoft.NETCore.DotNetHostPolicy.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
+        "microsoft.netcore.dotnethostpolicy.1.0.3.nupkg.sha512",
+        "microsoft.netcore.dotnethostpolicy.nuspec",
         "runtime.json"
       ]
     },
     "Microsoft.NETCore.DotNetHostResolver/1.0.1": {
       "sha512": "yecusWzBxgSFOhUQrVPPx25Hu5FWvRT2ZhUtLaxtykiH5KWnBKjllvUhKb/lm41tBQbLNFstoSCWAB4JWhxSmA==",
       "type": "package",
-      "path": "Microsoft.NETCore.DotNetHostResolver/1.0.1",
+      "path": "microsoft.netcore.dotnethostresolver/1.0.1",
       "files": [
         "Microsoft.NETCore.DotNetHostResolver.1.0.1.nupkg.sha512",
         "Microsoft.NETCore.DotNetHostResolver.nuspec",
@@ -2182,47 +2299,47 @@
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.Jit/1.0.2": {
-      "sha512": "Ok2vWofa6X8WD9vc4pfLHwvJz1/B6t3gOAoZcjrjrQf7lQOlNIuZIZtLn3wnWX28DuQGpPJkRlBxFj7Z5txNqw==",
+    "Microsoft.NETCore.Jit/1.0.6": {
+      "sha512": "jwa1SyM4DYR0PNSXoTW01e33WLeti1Ub3e29D8e9NoVjSbVTcfbLzgimQzN7YAo60xZv+nc7xVxPe5UjxNnBSg==",
       "type": "package",
-      "path": "Microsoft.NETCore.Jit/1.0.2",
+      "path": "microsoft.netcore.jit/1.0.6",
       "files": [
-        "Microsoft.NETCore.Jit.1.0.2.nupkg.sha512",
-        "Microsoft.NETCore.Jit.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
+        "microsoft.netcore.jit.1.0.6.nupkg.sha512",
+        "microsoft.netcore.jit.nuspec",
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.Platforms/1.0.1": {
-      "sha512": "Wtg6GMpeciRTS2IkxckIL+CbxJdJUX5DmX5FoIaQ3mUKDO2g41VLl8WNcKWhddMRJLn1Nx52m2tS9/yYdu7eTg==",
+    "Microsoft.NETCore.Platforms/1.0.2": {
+      "sha512": "oHDhPZQLaApjaKTVbrmntN9j/zPvIf4i/CEMlc6Qqd1Lddd6PRuMuwosEs9ugkUzkv4YDpd7N2c0JnSCta1e2w==",
       "type": "package",
-      "path": "Microsoft.NETCore.Platforms/1.0.1",
+      "path": "microsoft.netcore.platforms/1.0.2",
       "files": [
-        "Microsoft.NETCore.Platforms.1.0.1.nupkg.sha512",
-        "Microsoft.NETCore.Platforms.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/netstandard1.0/_._",
+        "microsoft.netcore.platforms.1.0.2.nupkg.sha512",
+        "microsoft.netcore.platforms.nuspec",
         "runtime.json"
       ]
     },
-    "Microsoft.NETCore.Runtime.CoreCLR/1.0.2": {
-      "sha512": "A0x1xtTjYJWZr2DRzgfCOXgB0JkQg8twnmtTJ79wFje+IihlLbXtx6Z2AxyVokBM5ruwTedR6YdCmHk39QJdtQ==",
+    "Microsoft.NETCore.Runtime.CoreCLR/1.0.6": {
+      "sha512": "FQRXbnO3Y1YxxIbFtGtMWDShWT070GJtzOvSKY0z2ylP7njHSUVt5cI99Ij1eIWR0pVN3mrLLWpY1joJkDddQA==",
       "type": "package",
-      "path": "Microsoft.NETCore.Runtime.CoreCLR/1.0.2",
+      "path": "microsoft.netcore.runtime.coreclr/1.0.6",
       "files": [
-        "Microsoft.NETCore.Runtime.CoreCLR.1.0.2.nupkg.sha512",
-        "Microsoft.NETCore.Runtime.CoreCLR.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
+        "microsoft.netcore.runtime.coreclr.1.0.6.nupkg.sha512",
+        "microsoft.netcore.runtime.coreclr.nuspec",
         "runtime.json"
       ]
     },
     "Microsoft.NETCore.Targets/1.0.1": {
       "sha512": "AxD1k75WPgsaP/GNB3JNVh9eEWeM2H473ztuuuGTmt8Mo2hNEq8LyxEMIVlJjQ7auY2IlSsAAJElwdNW4an1pw==",
       "type": "package",
-      "path": "Microsoft.NETCore.Targets/1.0.1",
+      "path": "microsoft.netcore.targets/1.0.1",
       "files": [
         "Microsoft.NETCore.Targets.1.0.1.nupkg.sha512",
         "Microsoft.NETCore.Targets.nuspec",
@@ -2235,7 +2352,7 @@
     "Microsoft.NETCore.Windows.ApiSets/1.0.1": {
       "sha512": "Wro4PFb2gjFtuAaejvMgR9styvVQy6rFN9/mm5OtobLD05vyhouMoPQqAaPeGyqZms3UE4pMzj5TwZ1EUIW35w==",
       "type": "package",
-      "path": "Microsoft.NETCore.Windows.ApiSets/1.0.1",
+      "path": "microsoft.netcore.windows.apisets/1.0.1",
       "files": [
         "Microsoft.NETCore.Windows.ApiSets.1.0.1.nupkg.sha512",
         "Microsoft.NETCore.Windows.ApiSets.nuspec",
@@ -2247,7 +2364,7 @@
     "Microsoft.VisualBasic/10.0.1": {
       "sha512": "7eKyvxBhryfJbtXUDCr6vzFQ2kzwZ4pTHRHnPrr3+VWQAQ1QydNZRKeXP47RGgXDvzX3kv+me+nYXWMqwhU4yg==",
       "type": "package",
-      "path": "Microsoft.VisualBasic/10.0.1",
+      "path": "microsoft.visualbasic/10.0.1",
       "files": [
         "Microsoft.VisualBasic.10.0.1.nupkg.sha512",
         "Microsoft.VisualBasic.nuspec",
@@ -2290,7 +2407,7 @@
     "Microsoft.Win32.Primitives/4.0.1": {
       "sha512": "Z3/5KS26+NMk4HUMyTfFQ1ADWU1dg5rnR99gBZ6ficbtkn3OyM70RyKhDYrJhB/wnyscbNrQyTYYeKj0UHIHZQ==",
       "type": "package",
-      "path": "Microsoft.Win32.Primitives/4.0.1",
+      "path": "microsoft.win32.primitives/4.0.1",
       "files": [
         "Microsoft.Win32.Primitives.4.0.1.nupkg.sha512",
         "Microsoft.Win32.Primitives.nuspec",
@@ -2326,7 +2443,7 @@
     "Microsoft.Win32.Registry/4.0.0": {
       "sha512": "pCq3s+wtMWPe2I26cluDPwbRZ+gWcvBgcveHAM7B4vEeZGOQ6XggotkVFGypjXGs+kfiBAG8xaqDH+Pw9CnmFw==",
       "type": "package",
-      "path": "Microsoft.Win32.Registry/4.0.0",
+      "path": "microsoft.win32.registry/4.0.0",
       "files": [
         "Microsoft.Win32.Registry.4.0.0.nupkg.sha512",
         "Microsoft.Win32.Registry.nuspec",
@@ -2354,7 +2471,7 @@
     "NETStandard.Library/1.6.0": {
       "sha512": "KQSEZuvfNV24qESFCzzrMTQFK6moOiOzVwoAiw0UkYCWfbrswpzYMDIq4fk1fSnewyP3ahn1m+pIB5kBCtpPGQ==",
       "type": "package",
-      "path": "NETStandard.Library/1.6.0",
+      "path": "netstandard.library/1.6.0",
       "files": [
         "NETStandard.Library.1.6.0.nupkg.sha512",
         "NETStandard.Library.nuspec",
@@ -2365,7 +2482,7 @@
     "runtime.native.System/4.0.0": {
       "sha512": "tghBytWesHM+/vGgwFl9sbf/X1shabWtb8S7AMVN8AR4KsmYfQ8SVXi2qYon4nyHUGS38GDP6ErLzCVQozUrIQ==",
       "type": "package",
-      "path": "runtime.native.System/4.0.0",
+      "path": "runtime.native.system/4.0.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -2377,7 +2494,7 @@
     "runtime.native.System.IO.Compression/4.1.0": {
       "sha512": "73LxRgAEmt6KBMsjAccYYbeu7EUMgUDhFWCiiSLY8OrV0ZYSrPjxVpRMPx1tbrNNNI7Et3YIWuTpeuvG+beW2A==",
       "type": "package",
-      "path": "runtime.native.System.IO.Compression/4.1.0",
+      "path": "runtime.native.system.io.compression/4.1.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -2389,7 +2506,7 @@
     "runtime.native.System.Net.Http/4.0.1": {
       "sha512": "eL+5IzlFMUtLpSApLWKJp1sVjKH87v3AoMxWyA1Lv9VvKRBmK+zpMeVrpAebYmsBvNHlLDVdFhVgBT3KPtXN8A==",
       "type": "package",
-      "path": "runtime.native.System.Net.Http/4.0.1",
+      "path": "runtime.native.system.net.http/4.0.1",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -2401,7 +2518,7 @@
     "runtime.native.System.Net.Security/4.0.1": {
       "sha512": "n6ggTKb0i8MZWK4wmhsns/OKrEEZ4sb0rIcwdQgecZewyts0MwMpsSaDsHAW7dEjLNbcXXAAlqFNQ22GMo5baw==",
       "type": "package",
-      "path": "runtime.native.System.Net.Security/4.0.1",
+      "path": "runtime.native.system.net.security/4.0.1",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -2413,7 +2530,7 @@
     "runtime.native.System.Security.Cryptography/4.0.0": {
       "sha512": "FcvWKeDUmjKcQgXKNZBZSbQGMvDwN1gwt/vQdJyxy0PGbVqJ4iqfhk8UuSFzTwyh5AYK11HRooRU5mdMz+TWug==",
       "type": "package",
-      "path": "runtime.native.System.Security.Cryptography/4.0.0",
+      "path": "runtime.native.system.security.cryptography/4.0.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -2425,7 +2542,7 @@
     "System.AppContext/4.1.0": {
       "sha512": "iudni2oX88AxjVeC8teQwqOfpkZhszhwVT68C02SSma7PwxL/nmNISw9Ri4B6gaUmqoeiUCtaARXsNnLs3cyfw==",
       "type": "package",
-      "path": "System.AppContext/4.1.0",
+      "path": "system.appcontext/4.1.0",
       "files": [
         "System.AppContext.4.1.0.nupkg.sha512",
         "System.AppContext.nuspec",
@@ -2478,7 +2595,7 @@
     "System.Buffers/4.0.0": {
       "sha512": "CLJGeYCddJu92VHIKkQnRpEiKm1lscSdTtt/ZUNQWbhGK+8rXiUGMDvZjxlmlNV9T28uYPA9H1eK96ivWlqthw==",
       "type": "package",
-      "path": "System.Buffers/4.0.0",
+      "path": "system.buffers/4.0.0",
       "files": [
         "System.Buffers.4.0.0.nupkg.sha512",
         "System.Buffers.nuspec",
@@ -2491,7 +2608,7 @@
     "System.Collections/4.0.11": {
       "sha512": "Ypvn8a1bkhPVqZD66abaEhjyGVQ1afY9PdnHljsqHfI/9qYR6PKVRxR6BQjvUrFZzFJaV9MZsLk+h1u4XbVz6w==",
       "type": "package",
-      "path": "System.Collections/4.0.11",
+      "path": "system.collections/4.0.11",
       "files": [
         "System.Collections.4.0.11.nupkg.sha512",
         "System.Collections.nuspec",
@@ -2557,7 +2674,7 @@
     "System.Collections.Concurrent/4.0.12": {
       "sha512": "/t5zvciI5s+eOEvfxTTUlmTuAufGwPsHj2DJ0nec2UShpd0AB07i5y3x65aQ25I2bDKY9K8h8h+/VRzYr0xaxg==",
       "type": "package",
-      "path": "System.Collections.Concurrent/4.0.12",
+      "path": "system.collections.concurrent/4.0.12",
       "files": [
         "System.Collections.Concurrent.4.0.12.nupkg.sha512",
         "System.Collections.Concurrent.nuspec",
@@ -2623,7 +2740,7 @@
     "System.Collections.Immutable/1.2.0": {
       "sha512": "oZSIjSeQjzj30zEM6boO9GnIL89gAEhU+m1ks6PM8IMKH1IDTYz+Ne5KnWxEheJclPZDFtncWI8oPZ9nJqIKcg==",
       "type": "package",
-      "path": "System.Collections.Immutable/1.2.0",
+      "path": "system.collections.immutable/1.2.0",
       "files": [
         "System.Collections.Immutable.1.2.0.nupkg.sha512",
         "System.Collections.Immutable.nuspec",
@@ -2638,7 +2755,7 @@
     "System.ComponentModel/4.0.1": {
       "sha512": "BK5ByJxNaEl3WvwM0/pv8oMIbvxwJGnbYpcPCbgAT0AwGBJjUcJqECa/zbp7CnAHOAedMFjjSnDee5t3c3w2fQ==",
       "type": "package",
-      "path": "System.ComponentModel/4.0.1",
+      "path": "system.componentmodel/4.0.1",
       "files": [
         "System.ComponentModel.4.0.1.nupkg.sha512",
         "System.ComponentModel.nuspec",
@@ -2695,7 +2812,7 @@
     "System.ComponentModel.Annotations/4.1.0": {
       "sha512": "F6ex0ibtVjctJjfM/cN8iI31cKXjB3MtsH0j7EQEfyILoZeeRz9wfDPwO3Dxx03kJAJ+1mkOqgrrHyMK4VzLnA==",
       "type": "package",
-      "path": "System.ComponentModel.Annotations/4.1.0",
+      "path": "system.componentmodel.annotations/4.1.0",
       "files": [
         "System.ComponentModel.Annotations.4.1.0.nupkg.sha512",
         "System.ComponentModel.Annotations.nuspec",
@@ -2772,7 +2889,7 @@
     "System.Console/4.0.0": {
       "sha512": "bI6y3O6GAjhFjbMNuXUA1mLiOHnA1RLyDRJIcrXUzhm9EIWnz0k7yei60VNbg2jpDiI1TsFrEJqyNaxk8v7zUA==",
       "type": "package",
-      "path": "System.Console/4.0.0",
+      "path": "system.console/4.0.0",
       "files": [
         "System.Console.4.0.0.nupkg.sha512",
         "System.Console.nuspec",
@@ -2808,7 +2925,7 @@
     "System.Diagnostics.Debug/4.0.11": {
       "sha512": "WEuHhnclaZN48bZ0R5HMpiEb3saxcEza4PkeXPbP+09lejXtXLqJn2atMZdpPWnNPeEdVCI52oEVJMSDjhNHng==",
       "type": "package",
-      "path": "System.Diagnostics.Debug/4.0.11",
+      "path": "system.diagnostics.debug/4.0.11",
       "files": [
         "System.Diagnostics.Debug.4.0.11.nupkg.sha512",
         "System.Diagnostics.Debug.nuspec",
@@ -2874,7 +2991,7 @@
     "System.Diagnostics.DiagnosticSource/4.0.0": {
       "sha512": "nSZ3DOOwKXoJ33VgnjzIyrgmj2p9a9h304Iwjj5AfUp9Wp2FYHL5aIHT9CCgg72aOYOQ/OB0kmW3HrzypiZ1Eg==",
       "type": "package",
-      "path": "System.Diagnostics.DiagnosticSource/4.0.0",
+      "path": "system.diagnostics.diagnosticsource/4.0.0",
       "files": [
         "System.Diagnostics.DiagnosticSource.4.0.0.nupkg.sha512",
         "System.Diagnostics.DiagnosticSource.nuspec",
@@ -2893,7 +3010,7 @@
     "System.Diagnostics.FileVersionInfo/4.0.0": {
       "sha512": "w4EYs9P8e2pQpgfnJpMRzFT+l2omYS7no/9WmnwGSSYdO84FpXreiy55lklG46Xjj1my4uso6k4f/KVFjfYCWQ==",
       "type": "package",
-      "path": "System.Diagnostics.FileVersionInfo/4.0.0",
+      "path": "system.diagnostics.fileversioninfo/4.0.0",
       "files": [
         "System.Diagnostics.FileVersionInfo.4.0.0.nupkg.sha512",
         "System.Diagnostics.FileVersionInfo.nuspec",
@@ -2933,7 +3050,7 @@
     "System.Diagnostics.Process/4.1.0": {
       "sha512": "wTPPREgR62k1MYCYyyklJageGbFR/Juf6Q7NCsau10VTAOQABT7/47UEIzs3YwwS1rnuHKaV29ZIcSNHzt6VUw==",
       "type": "package",
-      "path": "System.Diagnostics.Process/4.1.0",
+      "path": "system.diagnostics.process/4.1.0",
       "files": [
         "System.Diagnostics.Process.4.1.0.nupkg.sha512",
         "System.Diagnostics.Process.nuspec",
@@ -2988,7 +3105,7 @@
     "System.Diagnostics.StackTrace/4.0.1": {
       "sha512": "bP+tEsmo9OcNNMxvj7rC0xsJ/SzDebhPDRjgpMWzkOB1M4CK0cCWD6lKYIbbpWEn4UErNfC2x+qfTwtgrbA6og==",
       "type": "package",
-      "path": "System.Diagnostics.StackTrace/4.0.1",
+      "path": "system.diagnostics.stacktrace/4.0.1",
       "files": [
         "System.Diagnostics.StackTrace.4.0.1.nupkg.sha512",
         "System.Diagnostics.StackTrace.nuspec",
@@ -3026,7 +3143,7 @@
     "System.Diagnostics.Tools/4.0.1": {
       "sha512": "bJKRw/EwRrNaReFyemRanx+kNzkjZshuFlD5bI2uRebcJNU1CC9QwnIpd9+XsqbSl36nVyeCibF6j3fAVz+wrA==",
       "type": "package",
-      "path": "System.Diagnostics.Tools/4.0.1",
+      "path": "system.diagnostics.tools/4.0.1",
       "files": [
         "System.Diagnostics.Tools.4.0.1.nupkg.sha512",
         "System.Diagnostics.Tools.nuspec",
@@ -3081,7 +3198,7 @@
     "System.Diagnostics.Tracing/4.1.0": {
       "sha512": "NLNvglSe2NJ9MIBW09gon1PU45edIJTTMiVslO3Ml7MSDAVE86mx+S4j2VRPXrtd25KQXVgbI/ee8IBaS66Clw==",
       "type": "package",
-      "path": "System.Diagnostics.Tracing/4.1.0",
+      "path": "system.diagnostics.tracing/4.1.0",
       "files": [
         "System.Diagnostics.Tracing.4.1.0.nupkg.sha512",
         "System.Diagnostics.Tracing.nuspec",
@@ -3169,7 +3286,7 @@
     "System.Dynamic.Runtime/4.0.11": {
       "sha512": "reIF8GIipZdUz/mzUGWSQKYKk+x7TlCs51vNE3l18dMQEY8+319JAh40vqBT/cXm3t7M6rDnJVqcgMwWSr3oaQ==",
       "type": "package",
-      "path": "System.Dynamic.Runtime/4.0.11",
+      "path": "system.dynamic.runtime/4.0.11",
       "files": [
         "System.Dynamic.Runtime.4.0.11.nupkg.sha512",
         "System.Dynamic.Runtime.nuspec",
@@ -3238,7 +3355,7 @@
     "System.Globalization/4.0.11": {
       "sha512": "NiZZdfbtf5jW7mRZMyiCikdmOmh/dkoe9Cne7gQUbHW+SAab5oC3NKA9m4h/8VFmgWvWCuktU5y+1hRl/5Bj0Q==",
       "type": "package",
-      "path": "System.Globalization/4.0.11",
+      "path": "system.globalization/4.0.11",
       "files": [
         "System.Globalization.4.0.11.nupkg.sha512",
         "System.Globalization.nuspec",
@@ -3304,7 +3421,7 @@
     "System.Globalization.Calendars/4.0.1": {
       "sha512": "mN8pXy3Yrxf7rPfVusgVlJjLitljRlbPdOGAYCDerzNdVNtyrVJFqdUcZ51f6fUQI9x6FxuOlVtILMukJhStwg==",
       "type": "package",
-      "path": "System.Globalization.Calendars/4.0.1",
+      "path": "system.globalization.calendars/4.0.1",
       "files": [
         "System.Globalization.Calendars.4.0.1.nupkg.sha512",
         "System.Globalization.Calendars.nuspec",
@@ -3340,7 +3457,7 @@
     "System.Globalization.Extensions/4.0.1": {
       "sha512": "rAhlBbFh51Bw6ql1hEyhxczPh171+k8fGOs05hq8+KLggbw4k6cw5go6tche3le2ur+tYMhXTWfz6xri4gmm+A==",
       "type": "package",
-      "path": "System.Globalization.Extensions/4.0.1",
+      "path": "system.globalization.extensions/4.0.1",
       "files": [
         "System.Globalization.Extensions.4.0.1.nupkg.sha512",
         "System.Globalization.Extensions.nuspec",
@@ -3379,7 +3496,7 @@
     "System.IO/4.1.0": {
       "sha512": "M9Q5YARlBLI/C/+PG285VneqF6IZQ6Ru6SNrbqfiBI6LypQIiTUKp5xXp5hQYDIoSqI+sEcN0EssC/ogqn3L6A==",
       "type": "package",
-      "path": "System.IO/4.1.0",
+      "path": "system.io/4.1.0",
       "files": [
         "System.IO.4.1.0.nupkg.sha512",
         "System.IO.nuspec",
@@ -3458,7 +3575,7 @@
     "System.IO.Compression/4.1.0": {
       "sha512": "XQIXfSBGLV2+4sBgBbGu84khYwka3MPl2/9ttiatf1hM9Pgk/adr8w8UsurIwuIFvXNEt7XAuZ83GxmQ+O+J2Q==",
       "type": "package",
-      "path": "System.IO.Compression/4.1.0",
+      "path": "system.io.compression/4.1.0",
       "files": [
         "System.IO.Compression.4.1.0.nupkg.sha512",
         "System.IO.Compression.nuspec",
@@ -3527,7 +3644,7 @@
     "System.IO.Compression.ZipFile/4.0.1": {
       "sha512": "lHMfczm5/inswTuB+K8YGgMSxPfH1Q4RFjnqoUwjygmth4SiV/gLTeK0jrt89hPhcgS9pSzOEFAC0GwEkXbiUg==",
       "type": "package",
-      "path": "System.IO.Compression.ZipFile/4.0.1",
+      "path": "system.io.compression.zipfile/4.0.1",
       "files": [
         "System.IO.Compression.ZipFile.4.0.1.nupkg.sha512",
         "System.IO.Compression.ZipFile.nuspec",
@@ -3564,7 +3681,7 @@
     "System.IO.FileSystem/4.0.1": {
       "sha512": "EB00kjdCP3RvjZGjqgxLe7hFer7OAgWRpeGtny4rYuqAA+j0pIFnznpiOd1bdhSabEXJ7DRftqKaaxho8J9I6g==",
       "type": "package",
-      "path": "System.IO.FileSystem/4.0.1",
+      "path": "system.io.filesystem/4.0.1",
       "files": [
         "System.IO.FileSystem.4.0.1.nupkg.sha512",
         "System.IO.FileSystem.nuspec",
@@ -3600,7 +3717,7 @@
     "System.IO.FileSystem.Primitives/4.0.1": {
       "sha512": "POucGnBisStM6Er3g2W/qLbFDbXCI2PR14yLi8lWj/7Q3nBQ8S+mmQFdoFQv+jHoANnvychLSNt9BSXCQlkp8Q==",
       "type": "package",
-      "path": "System.IO.FileSystem.Primitives/4.0.1",
+      "path": "system.io.filesystem.primitives/4.0.1",
       "files": [
         "System.IO.FileSystem.Primitives.4.0.1.nupkg.sha512",
         "System.IO.FileSystem.Primitives.nuspec",
@@ -3637,7 +3754,7 @@
     "System.IO.FileSystem.Watcher/4.0.0": {
       "sha512": "Az/sSH2Aqz5TqKJTsevHL0fxpd5hOY5DColkDWQ2F1iG0XNYrm7gY2lGKHd7Ty1UMMbZWy6sz5Sh/70f/0Bugw==",
       "type": "package",
-      "path": "System.IO.FileSystem.Watcher/4.0.0",
+      "path": "system.io.filesystem.watcher/4.0.0",
       "files": [
         "System.IO.FileSystem.Watcher.4.0.0.nupkg.sha512",
         "System.IO.FileSystem.Watcher.nuspec",
@@ -3678,7 +3795,7 @@
     "System.IO.MemoryMappedFiles/4.0.0": {
       "sha512": "c5hXX29M0cPOJioMeI6GI+jf32mlcytemj22hHXy4hp0e4t5GPilocSC/3LXBnnC6/Q/VaTI8qM2NBO420CAWw==",
       "type": "package",
-      "path": "System.IO.MemoryMappedFiles/4.0.0",
+      "path": "system.io.memorymappedfiles/4.0.0",
       "files": [
         "System.IO.MemoryMappedFiles.4.0.0.nupkg.sha512",
         "System.IO.MemoryMappedFiles.nuspec",
@@ -3718,7 +3835,7 @@
     "System.IO.UnmanagedMemoryStream/4.0.1": {
       "sha512": "L4oAsyCM9tYiNjCm1lGgbufjEs2BEOYvyTIJ0x1XP34k32IveuZGoGsvWrpOCVVlwcajtUYT99atDmMYOukb7g==",
       "type": "package",
-      "path": "System.IO.UnmanagedMemoryStream/4.0.1",
+      "path": "system.io.unmanagedmemorystream/4.0.1",
       "files": [
         "System.IO.UnmanagedMemoryStream.4.0.1.nupkg.sha512",
         "System.IO.UnmanagedMemoryStream.nuspec",
@@ -3755,7 +3872,7 @@
     "System.Linq/4.1.0": {
       "sha512": "d6/2UMVc2NQmxCD1xpFVu33AGgFm4NIq12yhg7mupHtG4B30JriF1eq6V94vMMSeNbDXqo8llr7isvSfs85r0g==",
       "type": "package",
-      "path": "System.Linq/4.1.0",
+      "path": "system.linq/4.1.0",
       "files": [
         "System.Linq.4.1.0.nupkg.sha512",
         "System.Linq.nuspec",
@@ -3822,13 +3939,11 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "System.Linq.Expressions/4.1.0": {
-      "sha512": "vDPfDecivNpX9sEDvSgIy2RyK23VqraLFoWM3k3Yfhnxfs5Tk+oKkAefgiehEkwJXkagRULTH6wClNPQf+KUwg==",
+    "System.Linq.Expressions/4.1.1": {
+      "sha512": "bXwi8FrK/XIGPvtk1ZnawffhqLPyacj7dZnbFaV52YGaQigNqGEzNAByAIvL9FlEe3TCzoInorHF91IK//Q3Xg==",
       "type": "package",
-      "path": "System.Linq.Expressions/4.1.0",
+      "path": "system.linq.expressions/4.1.1",
       "files": [
-        "System.Linq.Expressions.4.1.0.nupkg.sha512",
-        "System.Linq.Expressions.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/MonoAndroid10/_._",
@@ -3901,13 +4016,15 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "runtimes/aot/lib/netcore50/System.Linq.Expressions.dll"
+        "runtimes/aot/lib/netcore50/System.Linq.Expressions.dll",
+        "system.linq.expressions.4.1.1.nupkg.sha512",
+        "system.linq.expressions.nuspec"
       ]
     },
     "System.Linq.Parallel/4.0.1": {
       "sha512": "e4Dihp1oOrxZYYdAfpGwYmV8hVl9kkOJZ73s+fZTMmHNVrsqY3SVSMOerLtYuL24XCbfnSk+ECGhQVJi2Bg/+A==",
       "type": "package",
-      "path": "System.Linq.Parallel/4.0.1",
+      "path": "system.linq.parallel/4.0.1",
       "files": [
         "System.Linq.Parallel.4.0.1.nupkg.sha512",
         "System.Linq.Parallel.nuspec",
@@ -3962,7 +4079,7 @@
     "System.Linq.Queryable/4.0.1": {
       "sha512": "SL+LkGwKHOGwFBIBl3fkG2ZF9SbBYmR4RadKg1br1ZwiY1135vvy24ERJ+bObfVV6xzDBh9rwy1dZ5LvxLR4jg==",
       "type": "package",
-      "path": "System.Linq.Queryable/4.0.1",
+      "path": "system.linq.queryable/4.0.1",
       "files": [
         "System.Linq.Queryable.4.0.1.nupkg.sha512",
         "System.Linq.Queryable.nuspec",
@@ -4016,13 +4133,11 @@
         "ref/xamarinwatchos10/_._"
       ]
     },
-    "System.Net.Http/4.1.0": {
-      "sha512": "A6oYMcg05rMIrtzS26jFi/E7FczqH4keKbkz86U4t3g/jeusG+xqHCkxrxK7rCz0hTqcHXzpFQjWL3ImvlKmmw==",
+    "System.Net.Http/4.1.1": {
+      "sha512": "UB6cBljFrgbAjIpwiP+vzEzL9LW7DsO6rRuPfpWaGtK6+obBdkkDOi/3WggHPRGwl9NRHlv4xnEmBrYfKSfq1Q==",
       "type": "package",
-      "path": "System.Net.Http/4.1.0",
+      "path": "system.net.http/4.1.1",
       "files": [
-        "System.Net.Http.4.1.0.nupkg.sha512",
-        "System.Net.Http.nuspec",
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
         "lib/Xamarinmac20/_._",
@@ -4093,13 +4208,15 @@
         "runtimes/unix/lib/netstandard1.6/System.Net.Http.dll",
         "runtimes/win/lib/net46/System.Net.Http.dll",
         "runtimes/win/lib/netcore50/System.Net.Http.dll",
-        "runtimes/win/lib/netstandard1.3/System.Net.Http.dll"
+        "runtimes/win/lib/netstandard1.3/System.Net.Http.dll",
+        "system.net.http.4.1.1.nupkg.sha512",
+        "system.net.http.nuspec"
       ]
     },
     "System.Net.NameResolution/4.0.0": {
       "sha512": "hNgF5petCI6ad29eHolmK2V4PptAG5gGhR+n4PSNIFSr4gDIbZoLLHj+exr2yd4D9Y2mwJK/IxVbNQiAZM8nTA==",
       "type": "package",
-      "path": "System.Net.NameResolution/4.0.0",
+      "path": "system.net.nameresolution/4.0.0",
       "files": [
         "System.Net.NameResolution.4.0.0.nupkg.sha512",
         "System.Net.NameResolution.nuspec",
@@ -4139,7 +4256,7 @@
     "System.Net.Primitives/4.0.11": {
       "sha512": "JB9ALIoWl+WvJQpWczHgfDfMk7wN4/L0K0eJscy/3zCQsgtfTyVqD79zkKVoJ4hH1/r/xutDRD9Z2IpBEbtonQ==",
       "type": "package",
-      "path": "System.Net.Primitives/4.0.11",
+      "path": "system.net.primitives/4.0.11",
       "files": [
         "System.Net.Primitives.4.0.11.nupkg.sha512",
         "System.Net.Primitives.nuspec",
@@ -4216,7 +4333,7 @@
     "System.Net.Requests/4.0.11": {
       "sha512": "vNeeV5LIiWKO4p95C7X+ipbFp2Ot8JQAumIzaDllT/haRZBimlzRcx3NeHY04Ripk5Nttd8W1pnOSjw39bO7ng==",
       "type": "package",
-      "path": "System.Net.Requests/4.0.11",
+      "path": "system.net.requests/4.0.11",
       "files": [
         "System.Net.Requests.4.0.11.nupkg.sha512",
         "System.Net.Requests.nuspec",
@@ -4297,7 +4414,7 @@
     "System.Net.Security/4.0.0": {
       "sha512": "z22yAxef7J7LLDKFrmC8ReUmjLd7xb8H8iitNruacjBl6bNriYiPChNCEejOwZwPVTPrAYr3zsGU5KS8gZUCYQ==",
       "type": "package",
-      "path": "System.Net.Security/4.0.0",
+      "path": "system.net.security/4.0.0",
       "files": [
         "System.Net.Security.4.0.0.nupkg.sha512",
         "System.Net.Security.nuspec",
@@ -4337,7 +4454,7 @@
     "System.Net.Sockets/4.1.0": {
       "sha512": "WE/EoJkapOfmJzSXB71jca/bklz0rgZEeIRnVencuP3IOasPqZRy7pmZUdtgAIlJHADMxfQkVGGNiH35Ehp/Dg==",
       "type": "package",
-      "path": "System.Net.Sockets/4.1.0",
+      "path": "system.net.sockets/4.1.0",
       "files": [
         "System.Net.Sockets.4.1.0.nupkg.sha512",
         "System.Net.Sockets.nuspec",
@@ -4373,7 +4490,7 @@
     "System.Net.WebHeaderCollection/4.0.1": {
       "sha512": "qQTjIBs9z/LOyS/Kxfud1POK+Urxf2z6MYEdKXHwSfu9Ncut7Jk9vo01AHAgs2CcWZJchOrsUQEDVLER9+ZuGg==",
       "type": "package",
-      "path": "System.Net.WebHeaderCollection/4.0.1",
+      "path": "system.net.webheadercollection/4.0.1",
       "files": [
         "System.Net.WebHeaderCollection.4.0.1.nupkg.sha512",
         "System.Net.WebHeaderCollection.nuspec",
@@ -4410,7 +4527,7 @@
     "System.Numerics.Vectors/4.1.1": {
       "sha512": "5IpzA4nCeyTPoD8EbgX1TkfHBte+BWk5nMoA1+h3lpYUdoxYd1MnkoaRj5BLFQ3NlEwQzKP2LWCgcbY8yWp9Ow==",
       "type": "package",
-      "path": "System.Numerics.Vectors/4.1.1",
+      "path": "system.numerics.vectors/4.1.1",
       "files": [
         "System.Numerics.Vectors.4.1.1.nupkg.sha512",
         "System.Numerics.Vectors.nuspec",
@@ -4443,7 +4560,7 @@
     "System.ObjectModel/4.0.12": {
       "sha512": "AeqQ1lrkH8tzt1rGTZexOXBpK/XespG+z6xBdu1MN/S+iV7UKX4Dt+BnphzxcTJ8AcWn19CrHYYg2KfndUnvAw==",
       "type": "package",
-      "path": "System.ObjectModel/4.0.12",
+      "path": "system.objectmodel/4.0.12",
       "files": [
         "System.ObjectModel.4.0.12.nupkg.sha512",
         "System.ObjectModel.nuspec",
@@ -4511,7 +4628,7 @@
     "System.Reflection/4.1.0": {
       "sha512": "NXnF0eO4f7GhyrkcKy5RgrR15lJJ7YXgs7C5LWkeJV5kLTMfPC2S8AnVT4xPvEJr9aprjSnOIqmtVlJLnXAxBQ==",
       "type": "package",
-      "path": "System.Reflection/4.1.0",
+      "path": "system.reflection/4.1.0",
       "files": [
         "System.Reflection.4.1.0.nupkg.sha512",
         "System.Reflection.nuspec",
@@ -4590,7 +4707,7 @@
     "System.Reflection.DispatchProxy/4.0.1": {
       "sha512": "06ZdLNDGRLKe7hqrELFzHSrUofwS1N5EiByXI1KX9eo1rv9/KK5aGPYVCe+fFct2Heq+VW0tqTRJshKSMeN9Iw==",
       "type": "package",
-      "path": "System.Reflection.DispatchProxy/4.0.1",
+      "path": "system.reflection.dispatchproxy/4.0.1",
       "files": [
         "System.Reflection.DispatchProxy.4.0.1.nupkg.sha512",
         "System.Reflection.DispatchProxy.nuspec",
@@ -4626,7 +4743,7 @@
     "System.Reflection.Emit/4.0.1": {
       "sha512": "rVWPAVzuSws2LmIe0LvMEcF5v5SfXU1h8SDyXBCStoysNOm58z2AXJfFyAxTLgn4EkrU2Gi/tjlIJZVNlH6vOw==",
       "type": "package",
-      "path": "System.Reflection.Emit/4.0.1",
+      "path": "system.reflection.emit/4.0.1",
       "files": [
         "System.Reflection.Emit.4.0.1.nupkg.sha512",
         "System.Reflection.Emit.nuspec",
@@ -4656,7 +4773,7 @@
     "System.Reflection.Emit.ILGeneration/4.0.1": {
       "sha512": "pnJxiZ5Fr9xvfJXOZGxjLaBf73owIQ/PnRWqWp7oTprXIhDIO+nJ5XunM0M8oms3fp/HIU1HymZKz911DnpFwQ==",
       "type": "package",
-      "path": "System.Reflection.Emit.ILGeneration/4.0.1",
+      "path": "system.reflection.emit.ilgeneration/4.0.1",
       "files": [
         "System.Reflection.Emit.ILGeneration.4.0.1.nupkg.sha512",
         "System.Reflection.Emit.ILGeneration.nuspec",
@@ -4687,7 +4804,7 @@
     "System.Reflection.Emit.Lightweight/4.0.1": {
       "sha512": "WUk4HIpJkdS7TEd408L0CVQtC2je1gRLVvZXrGxZd98PEpTcXJwMTu/Ym35zip5BfWZU/ttbRZ0dXuS9w/aMeQ==",
       "type": "package",
-      "path": "System.Reflection.Emit.Lightweight/4.0.1",
+      "path": "system.reflection.emit.lightweight/4.0.1",
       "files": [
         "System.Reflection.Emit.Lightweight.4.0.1.nupkg.sha512",
         "System.Reflection.Emit.Lightweight.nuspec",
@@ -4718,7 +4835,7 @@
     "System.Reflection.Extensions/4.0.1": {
       "sha512": "VQnSuiSP8rmwB194uowxkEJali1eI2F/SspfxjCY0l3hP/FYXYkVYwhu+bbHZo+QiGFMbRr72S0nqzjLdpnrmA==",
       "type": "package",
-      "path": "System.Reflection.Extensions/4.0.1",
+      "path": "system.reflection.extensions/4.0.1",
       "files": [
         "System.Reflection.Extensions.4.0.1.nupkg.sha512",
         "System.Reflection.Extensions.nuspec",
@@ -4773,7 +4890,7 @@
     "System.Reflection.Metadata/1.3.0": {
       "sha512": "1maloe6wu72gxLJOWOJjzeeFAYr+mxL/NIcHqG0UjLOhRXuyyRARq/UlGd7iuJKt1MDrG/4YDOpWlsq1Sda5WA==",
       "type": "package",
-      "path": "System.Reflection.Metadata/1.3.0",
+      "path": "system.reflection.metadata/1.3.0",
       "files": [
         "System.Reflection.Metadata.1.3.0.nupkg.sha512",
         "System.Reflection.Metadata.nuspec",
@@ -4788,7 +4905,7 @@
     "System.Reflection.Primitives/4.0.1": {
       "sha512": "CE02GLFKBiPLl3Hg2xKSGU1L3/tfWLuKeKVaTJBjOZI8ChZuAVTkv/4bJdv/gY6/RgbVPIr7MeZ6fTMzk/8FDQ==",
       "type": "package",
-      "path": "System.Reflection.Primitives/4.0.1",
+      "path": "system.reflection.primitives/4.0.1",
       "files": [
         "System.Reflection.Primitives.4.0.1.nupkg.sha512",
         "System.Reflection.Primitives.nuspec",
@@ -4843,7 +4960,7 @@
     "System.Reflection.TypeExtensions/4.1.0": {
       "sha512": "2wd9TWRHPw4WEKTbCunzcgyxhspr8kLsaHHpIcQXQyeVpi4+QwU3UIwyOJprDNU8uxVcyvF1R9sfpX8bl6Ukug==",
       "type": "package",
-      "path": "System.Reflection.TypeExtensions/4.1.0",
+      "path": "system.reflection.typeextensions/4.1.0",
       "files": [
         "System.Reflection.TypeExtensions.4.1.0.nupkg.sha512",
         "System.Reflection.TypeExtensions.nuspec",
@@ -4895,7 +5012,7 @@
     "System.Resources.Reader/4.0.0": {
       "sha512": "LYUaREHCkNYqAieCzKgBa6YaZpCa8a+tZc37Il0qP832L+S4QcW2KpmX5DnY5X8kDPrOdUMA3v7J+FHO9RfraQ==",
       "type": "package",
-      "path": "System.Resources.Reader/4.0.0",
+      "path": "system.resources.reader/4.0.0",
       "files": [
         "System.Resources.Reader.4.0.0.nupkg.sha512",
         "System.Resources.Reader.nuspec",
@@ -4907,7 +5024,7 @@
     "System.Resources.ResourceManager/4.0.1": {
       "sha512": "id1K6rjuK7A5zBctZBuDUmjoe+p80sEhXqwXc6IL4/BgQv5FbGue3prMkRGSXAsSiPhVcgvnoojQv+1TwgYqyQ==",
       "type": "package",
-      "path": "System.Resources.ResourceManager/4.0.1",
+      "path": "system.resources.resourcemanager/4.0.1",
       "files": [
         "System.Resources.ResourceManager.4.0.1.nupkg.sha512",
         "System.Resources.ResourceManager.nuspec",
@@ -4962,7 +5079,7 @@
     "System.Runtime/4.1.0": {
       "sha512": "1J8ZAxIfgtaay2fh+txeAv3Kt+pUI71dU7+/LAkDqyFQxsj3/XglWZGCScGZWvfjXO7BRb73Sxf5Pcevq4LPkg==",
       "type": "package",
-      "path": "System.Runtime/4.1.0",
+      "path": "system.runtime/4.1.0",
       "files": [
         "System.Runtime.4.1.0.nupkg.sha512",
         "System.Runtime.nuspec",
@@ -5052,7 +5169,7 @@
     "System.Runtime.Extensions/4.1.0": {
       "sha512": "HYP1WrgqAUnjaXEsOF3pv0TnaGPGK22Xkh4aivKXBs4g9AR9HZYcVvJexX35p6nR4vC7TPrp3Ei9SVBlH7P7rQ==",
       "type": "package",
-      "path": "System.Runtime.Extensions/4.1.0",
+      "path": "system.runtime.extensions/4.1.0",
       "files": [
         "System.Runtime.Extensions.4.1.0.nupkg.sha512",
         "System.Runtime.Extensions.nuspec",
@@ -5131,7 +5248,7 @@
     "System.Runtime.Handles/4.0.1": {
       "sha512": "x8gNYfFt7U9L0aEOWH9MaHT/NHyl8S56lbu/5tkbz28PP9bYMHZU/qbsxEzYP/M5knU5i2bZ9NQcwWQpMaDPvA==",
       "type": "package",
-      "path": "System.Runtime.Handles/4.0.1",
+      "path": "system.runtime.handles/4.0.1",
       "files": [
         "System.Runtime.Handles.4.0.1.nupkg.sha512",
         "System.Runtime.Handles.nuspec",
@@ -5167,7 +5284,7 @@
     "System.Runtime.InteropServices/4.1.0": {
       "sha512": "/qy2/TRV1OFJIu4L3SE9dF275329VqgaAT8o26pg6yy6KhTfuJg40XPPbwIhbdewGz5XB8m4uCFEDnOp/ScGbQ==",
       "type": "package",
-      "path": "System.Runtime.InteropServices/4.1.0",
+      "path": "system.runtime.interopservices/4.1.0",
       "files": [
         "System.Runtime.InteropServices.4.1.0.nupkg.sha512",
         "System.Runtime.InteropServices.nuspec",
@@ -5255,7 +5372,7 @@
     "System.Runtime.InteropServices.RuntimeInformation/4.0.0": {
       "sha512": "BXtMFcru5WhV80XxE8AEHFsj93OVKZU4hMgvquTbjukm0TheYZ4fp0ZMF2+lNaMPQvu7AiUPiMvt40dsaR71Bw==",
       "type": "package",
-      "path": "System.Runtime.InteropServices.RuntimeInformation/4.0.0",
+      "path": "system.runtime.interopservices.runtimeinformation/4.0.0",
       "files": [
         "System.Runtime.InteropServices.RuntimeInformation.4.0.0.nupkg.sha512",
         "System.Runtime.InteropServices.RuntimeInformation.nuspec",
@@ -5287,7 +5404,7 @@
     "System.Runtime.Loader/4.0.0": {
       "sha512": "qw6ybv9uzCWPLUnt8KZN6+z1tVVWdh0ZQY+d/G4NZxMKyM89Fjhg8G2NQdZtXtUhAyE0NM4tDcPyKZcJy2DB5g==",
       "type": "package",
-      "path": "System.Runtime.Loader/4.0.0",
+      "path": "system.runtime.loader/4.0.0",
       "files": [
         "System.Runtime.Loader.4.0.0.nupkg.sha512",
         "System.Runtime.Loader.nuspec",
@@ -5311,7 +5428,7 @@
     "System.Runtime.Numerics/4.0.1": {
       "sha512": "H5H9iVIXJE9543blPvwpnCn7U3wMuDwWEDfC7tx+1x1EIFzfTaOZmKMBRNs+07SpIOT5MCvzq9OZQzeIKSo2aA==",
       "type": "package",
-      "path": "System.Runtime.Numerics/4.0.1",
+      "path": "system.runtime.numerics/4.0.1",
       "files": [
         "System.Runtime.Numerics.4.0.1.nupkg.sha512",
         "System.Runtime.Numerics.nuspec",
@@ -5366,7 +5483,7 @@
     "System.Security.Claims/4.0.1": {
       "sha512": "AgpBullNh5ELWb0y5aakUenWrpjW+jYNhlFTdDY2emygvs9LHKlau1Qr95j6zweDZYCzVlCgFZszcKEeLBEeKQ==",
       "type": "package",
-      "path": "System.Security.Claims/4.0.1",
+      "path": "system.security.claims/4.0.1",
       "files": [
         "System.Security.Claims.4.0.1.nupkg.sha512",
         "System.Security.Claims.nuspec",
@@ -5403,7 +5520,7 @@
     "System.Security.Cryptography.Algorithms/4.2.0": {
       "sha512": "v1DVVMoJjT0ZnaaaHApxwwSBaXRypd5ITBL5LaAUnjhWCc10PSHLn/fyrJwRSszpFC4QAw6B0bfwn6SD7asaZA==",
       "type": "package",
-      "path": "System.Security.Cryptography.Algorithms/4.2.0",
+      "path": "system.security.cryptography.algorithms/4.2.0",
       "files": [
         "System.Security.Cryptography.Algorithms.4.2.0.nupkg.sha512",
         "System.Security.Cryptography.Algorithms.nuspec",
@@ -5441,7 +5558,7 @@
     "System.Security.Cryptography.Cng/4.2.0": {
       "sha512": "n6ORNZ4iltkNaaF1PWHHPnakniEMGeBZjou0tw1QrtkwS1lis5AH4nVzJx9bxj0ZmEgRx5hjN+wTWKXU6/AUsA==",
       "type": "package",
-      "path": "System.Security.Cryptography.Cng/4.2.0",
+      "path": "system.security.cryptography.cng/4.2.0",
       "files": [
         "System.Security.Cryptography.Cng.4.2.0.nupkg.sha512",
         "System.Security.Cryptography.Cng.nuspec",
@@ -5467,7 +5584,7 @@
     "System.Security.Cryptography.Csp/4.0.0": {
       "sha512": "1j5XYdIWsdFqtC9wFKsO0dLAff77U2T2gIaMc8uxwOtVuMXno4SGF2LagKAhmaqAKSWUpJ/TCrjxZlSILsUUUA==",
       "type": "package",
-      "path": "System.Security.Cryptography.Csp/4.0.0",
+      "path": "system.security.cryptography.csp/4.0.0",
       "files": [
         "System.Security.Cryptography.Csp.4.0.0.nupkg.sha512",
         "System.Security.Cryptography.Csp.nuspec",
@@ -5497,7 +5614,7 @@
     "System.Security.Cryptography.Encoding/4.0.0": {
       "sha512": "X5cFSwy3RJK4l3qAo2s/pcehAP97e7d0IIdUzbHj1F/ngoSnGla1qjvMU1QXueRXhHY9UPWPSU5o5A0B+nJ8hw==",
       "type": "package",
-      "path": "System.Security.Cryptography.Encoding/4.0.0",
+      "path": "system.security.cryptography.encoding/4.0.0",
       "files": [
         "System.Security.Cryptography.Encoding.4.0.0.nupkg.sha512",
         "System.Security.Cryptography.Encoding.nuspec",
@@ -5536,7 +5653,7 @@
     "System.Security.Cryptography.OpenSsl/4.0.0": {
       "sha512": "+NmEMXIaOyjDdN1jJXrT6kGi7GXHZwlMjSuX+SsRwGAXtAK8nKqA9TmEAf816sPhfsS7lU/Iy55LwiC6S863JQ==",
       "type": "package",
-      "path": "System.Security.Cryptography.OpenSsl/4.0.0",
+      "path": "system.security.cryptography.openssl/4.0.0",
       "files": [
         "System.Security.Cryptography.OpenSsl.4.0.0.nupkg.sha512",
         "System.Security.Cryptography.OpenSsl.nuspec",
@@ -5550,7 +5667,7 @@
     "System.Security.Cryptography.Primitives/4.0.0": {
       "sha512": "Wy91D7VX3yuQrjPhH6Ot8DTKamoRIYM+JdaMlc1uig7DHNevQcEUjsl6rJDDxaSav9xMrheJP47v2eay8bzgrQ==",
       "type": "package",
-      "path": "System.Security.Cryptography.Primitives/4.0.0",
+      "path": "system.security.cryptography.primitives/4.0.0",
       "files": [
         "System.Security.Cryptography.Primitives.4.0.0.nupkg.sha512",
         "System.Security.Cryptography.Primitives.nuspec",
@@ -5577,7 +5694,7 @@
     "System.Security.Cryptography.X509Certificates/4.1.0": {
       "sha512": "vOZ9kRtVFOBlByk0zBL2/1t0Agl3qJ8ISYIgXN7mdE/OUyWQOaj13dkC8FrS75UQSrP9d9Zs24ucyQjnpubieA==",
       "type": "package",
-      "path": "System.Security.Cryptography.X509Certificates/4.1.0",
+      "path": "system.security.cryptography.x509certificates/4.1.0",
       "files": [
         "System.Security.Cryptography.X509Certificates.4.1.0.nupkg.sha512",
         "System.Security.Cryptography.X509Certificates.nuspec",
@@ -5631,7 +5748,7 @@
     "System.Security.Principal/4.0.1": {
       "sha512": "YBn/79dTw9PRQYkjKcyS5oXrSFXQKYwJaOONUJimFeitw0rNzqdQUOnY4Vd8wMmUmbmRuYQyLdAIxrUh4g0jVA==",
       "type": "package",
-      "path": "System.Security.Principal/4.0.1",
+      "path": "system.security.principal/4.0.1",
       "files": [
         "System.Security.Principal.4.0.1.nupkg.sha512",
         "System.Security.Principal.nuspec",
@@ -5688,7 +5805,7 @@
     "System.Security.Principal.Windows/4.0.0": {
       "sha512": "JNqt+UcHZr5pJbxPcDtkNiI/dy6VP2KX60iekJqFcC9uIA8HcXMSk2B9y5WzFUxqYSSRRpJ+GNxaOG6/rKh1sw==",
       "type": "package",
-      "path": "System.Security.Principal.Windows/4.0.0",
+      "path": "system.security.principal.windows/4.0.0",
       "files": [
         "System.Security.Principal.Windows.4.0.0.nupkg.sha512",
         "System.Security.Principal.Windows.nuspec",
@@ -5715,7 +5832,7 @@
     "System.Text.Encoding/4.0.11": {
       "sha512": "BOUcdBgm4AOoJbZXPqC9fKdFTUnuePmFLGCaqZy5qQ2f1Gub1h4nEYvwIusaSGQkLPHlxqmgfqLFng7WC+uoIQ==",
       "type": "package",
-      "path": "System.Text.Encoding/4.0.11",
+      "path": "system.text.encoding/4.0.11",
       "files": [
         "System.Text.Encoding.4.0.11.nupkg.sha512",
         "System.Text.Encoding.nuspec",
@@ -5781,7 +5898,7 @@
     "System.Text.Encoding.CodePages/4.0.1": {
       "sha512": "v9+oivSyDA6XX/1r9sxzFdiyz9ICF/HnMhnee1P7mVWFc2Bj08sWK6b3jgiZE2FT4VWJBeuXFJkwR+m9C8/4hA==",
       "type": "package",
-      "path": "System.Text.Encoding.CodePages/4.0.1",
+      "path": "system.text.encoding.codepages/4.0.1",
       "files": [
         "System.Text.Encoding.CodePages.4.0.1.nupkg.sha512",
         "System.Text.Encoding.CodePages.nuspec",
@@ -5818,7 +5935,7 @@
     "System.Text.Encoding.Extensions/4.0.11": {
       "sha512": "qiNDAFlkMTgMRA0YzwNJckwC3yawCp/ZGBWpvEQsS97gjW0bRShPtYWxEajL5MLrBM+6vctbuLEFIprO0yF6jQ==",
       "type": "package",
-      "path": "System.Text.Encoding.Extensions/4.0.11",
+      "path": "system.text.encoding.extensions/4.0.11",
       "files": [
         "System.Text.Encoding.Extensions.4.0.11.nupkg.sha512",
         "System.Text.Encoding.Extensions.nuspec",
@@ -5884,7 +6001,7 @@
     "System.Text.RegularExpressions/4.1.0": {
       "sha512": "3LzuY47gaSLQVV9A0pvRdOHyqKQ3L9PioJ2ph+3JJypL9JZqAEs60AdpAGSDIwX4RZEcLiCU1moAjpAYVd9uCQ==",
       "type": "package",
-      "path": "System.Text.RegularExpressions/4.1.0",
+      "path": "system.text.regularexpressions/4.1.0",
       "files": [
         "System.Text.RegularExpressions.4.1.0.nupkg.sha512",
         "System.Text.RegularExpressions.nuspec",
@@ -5965,7 +6082,7 @@
     "System.Threading/4.0.11": {
       "sha512": "3owxlbJiqJBk7HD2oQKMj+ad2BBXGhWIhwxHBsPbL2eTQSN8AQFJuxq/zcwgAly+sy1sYJKw1Ck4XsMg30X/UQ==",
       "type": "package",
-      "path": "System.Threading/4.0.11",
+      "path": "system.threading/4.0.11",
       "files": [
         "System.Threading.4.0.11.nupkg.sha512",
         "System.Threading.nuspec",
@@ -6034,7 +6151,7 @@
     "System.Threading.Overlapped/4.0.1": {
       "sha512": "K/HLpBHDohqeewKJIW/lFgduYm3W0xcOyL0ZysFKnh9fYs8JOvJeu1VN/ll+yWOLMyWU1nDPElNmZhk5YrPLDA==",
       "type": "package",
-      "path": "System.Threading.Overlapped/4.0.1",
+      "path": "system.threading.overlapped/4.0.1",
       "files": [
         "System.Threading.Overlapped.4.0.1.nupkg.sha512",
         "System.Threading.Overlapped.nuspec",
@@ -6062,7 +6179,7 @@
     "System.Threading.Tasks/4.0.11": {
       "sha512": "Ky7LB6C3xso8fNQ10X6xNWYrfKtqmL9y+/tS03dh+Iq+f7SccewiTa40sGMKf8nXQaA62qs9hD0jqSKDLUd6Pw==",
       "type": "package",
-      "path": "System.Threading.Tasks/4.0.11",
+      "path": "system.threading.tasks/4.0.11",
       "files": [
         "System.Threading.Tasks.4.0.11.nupkg.sha512",
         "System.Threading.Tasks.nuspec",
@@ -6128,7 +6245,7 @@
     "System.Threading.Tasks.Dataflow/4.6.0": {
       "sha512": "x+xTGj6UvHR1x+KruIrpsFtEVH+8slQXu3PUNuAqOBe0zYprEPWzIZNW4a2WYYnqmYRrpXDrNTW5ifm8Xla6NQ==",
       "type": "package",
-      "path": "System.Threading.Tasks.Dataflow/4.6.0",
+      "path": "system.threading.tasks.dataflow/4.6.0",
       "files": [
         "System.Threading.Tasks.Dataflow.4.6.0.nupkg.sha512",
         "System.Threading.Tasks.Dataflow.nuspec",
@@ -6143,7 +6260,7 @@
     "System.Threading.Tasks.Extensions/4.0.0": {
       "sha512": "MwMOxsOe5E5hgWcXerqTNLolXY7uUpLr2jM5dsx6Id9KyCMu4/EOitg+EMyMNxvDTkUVISAM0IfgbcUjZ4piKA==",
       "type": "package",
-      "path": "System.Threading.Tasks.Extensions/4.0.0",
+      "path": "system.threading.tasks.extensions/4.0.0",
       "files": [
         "System.Threading.Tasks.Extensions.4.0.0.nupkg.sha512",
         "System.Threading.Tasks.Extensions.nuspec",
@@ -6158,7 +6275,7 @@
     "System.Threading.Tasks.Parallel/4.0.1": {
       "sha512": "gdz2wUpESxJM5akQvQgMqyhIVB1BO1KKmJMFgDiBHOlZbfzGyL4NJ0TDphR0PPVUWGrVf3/yfgRG+jt6GLGtlA==",
       "type": "package",
-      "path": "System.Threading.Tasks.Parallel/4.0.1",
+      "path": "system.threading.tasks.parallel/4.0.1",
       "files": [
         "System.Threading.Tasks.Parallel.4.0.1.nupkg.sha512",
         "System.Threading.Tasks.Parallel.nuspec",
@@ -6213,7 +6330,7 @@
     "System.Threading.Thread/4.0.0": {
       "sha512": "m7mpZRPXLGB7/93vq3I4V+p92FEVlog1JbIKzNNz1rb/w+XsV6G5xYajghNYGNPcvy4PBgT4Z+Ojya5UwUDdQQ==",
       "type": "package",
-      "path": "System.Threading.Thread/4.0.0",
+      "path": "system.threading.thread/4.0.0",
       "files": [
         "System.Threading.Thread.4.0.0.nupkg.sha512",
         "System.Threading.Thread.nuspec",
@@ -6251,7 +6368,7 @@
     "System.Threading.ThreadPool/4.0.10": {
       "sha512": "wawVD1g4m0sJwLUlIC1qRF7RqL8WwhI2vRDcqUHv6djEc/KALwdmZsXyqwri9zYH5LXOApTNlpYtj1CBzCE5AQ==",
       "type": "package",
-      "path": "System.Threading.ThreadPool/4.0.10",
+      "path": "system.threading.threadpool/4.0.10",
       "files": [
         "System.Threading.ThreadPool.4.0.10.nupkg.sha512",
         "System.Threading.ThreadPool.nuspec",
@@ -6289,7 +6406,7 @@
     "System.Threading.Timer/4.0.1": {
       "sha512": "9e0wgBAUCw6oVa88iVvwVMSe6g93GC91fK3eYJNQEDIUDZ7ldEmfBhMDvN1rw9NTK0KDCiR5qT+LUfX5Mq/F6g==",
       "type": "package",
-      "path": "System.Threading.Timer/4.0.1",
+      "path": "system.threading.timer/4.0.1",
       "files": [
         "System.Threading.Timer.4.0.1.nupkg.sha512",
         "System.Threading.Timer.nuspec",
@@ -6342,7 +6459,7 @@
     "System.Xml.ReaderWriter/4.0.11": {
       "sha512": "DC6Y+C21seFhH5i/F7z00DjPwLjl/EYPN9Rf4/4Q+y592xOa4eMSygixuU6A4bcTZJXcoP0a6iONK7MsCUy4dA==",
       "type": "package",
-      "path": "System.Xml.ReaderWriter/4.0.11",
+      "path": "system.xml.readerwriter/4.0.11",
       "files": [
         "System.Xml.ReaderWriter.4.0.11.nupkg.sha512",
         "System.Xml.ReaderWriter.nuspec",
@@ -6410,7 +6527,7 @@
     "System.Xml.XDocument/4.0.11": {
       "sha512": "FRnI5fkllDmbCyA8WaDlR1d+Ww0Fh0dvckr5iIEMAaJPCCk5/gPlr4FHHwgPFB123anXEK+HW0EHogjKiQavZA==",
       "type": "package",
-      "path": "System.Xml.XDocument/4.0.11",
+      "path": "system.xml.xdocument/4.0.11",
       "files": [
         "System.Xml.XDocument.4.0.11.nupkg.sha512",
         "System.Xml.XDocument.nuspec",
@@ -6478,7 +6595,7 @@
     "System.Xml.XmlDocument/4.0.1": {
       "sha512": "du6VK/czNCRoZIJE9LoZPeWeK3Xdctol31qi/45zBwaYZknJZr5obWUaM86CunzHEeZ1KRM1e0UdoJTRpTbXSw==",
       "type": "package",
-      "path": "System.Xml.XmlDocument/4.0.1",
+      "path": "system.xml.xmldocument/4.0.1",
       "files": [
         "System.Xml.XmlDocument.4.0.1.nupkg.sha512",
         "System.Xml.XmlDocument.nuspec",
@@ -6515,7 +6632,7 @@
     "System.Xml.XPath/4.0.1": {
       "sha512": "iaA+pUaEgsedQ7W1tvYIRzlg5pyMQWorxCmbA3pk23Whhx0PBiJtkjIeN6ig7xhUOHdiwiY6IwXqrIdH/zVaqw==",
       "type": "package",
-      "path": "System.Xml.XPath/4.0.1",
+      "path": "system.xml.xpath/4.0.1",
       "files": [
         "System.Xml.XPath.4.0.1.nupkg.sha512",
         "System.Xml.XPath.nuspec",
@@ -6552,7 +6669,7 @@
     "System.Xml.XPath.XDocument/4.0.1": {
       "sha512": "agzbJoG3xczpCQ0hQYML/ZPeM6x5yZXjau9OfAtsg0TMMNEYLq83stzNdYvJeUp3kF9CGgEf+KI3cyIDnDDuzA==",
       "type": "package",
-      "path": "System.Xml.XPath.XDocument/4.0.1",
+      "path": "system.xml.xpath.xdocument/4.0.1",
       "files": [
         "System.Xml.XPath.XDocument.4.0.1.nupkg.sha512",
         "System.Xml.XPath.XDocument.nuspec",
@@ -6588,11 +6705,58 @@
     }
   },
   "projectFileDependencyGroups": {
-    "": [],
     ".NETCoreApp,Version=v1.0": [
-      "Microsoft.NETCore.App >= 1.0.0-rc2-*"
+      "Microsoft.NETCore.App >= 1.0.4"
     ]
   },
-  "tools": {},
-  "projectFileToolGroups": {}
+  "packageFolders": {
+    "C:\\Users\\73626\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "c:\\Workspace\\Code\\VSCode\\DotNetCore\\LeetCode\\LeetCode.csproj",
+      "projectName": "LeetCode",
+      "projectPath": "c:\\Workspace\\Code\\VSCode\\DotNetCore\\LeetCode\\LeetCode.csproj",
+      "packagesPath": "C:\\Users\\73626\\.nuget\\packages\\",
+      "outputPath": "c:\\Workspace\\Code\\VSCode\\DotNetCore\\LeetCode\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "c:\\Workspace\\Code\\VSCode\\DotNetCore\\LeetCode\\NuGet.Config",
+        "C:\\Users\\73626\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp1.0"
+      ],
+      "sources": {
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {},
+        "https://api.nuget.org/v3/index.json": {},
+        "https://www.myget.org/F/aspnetcirelease/api/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp1.0": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp1.0": {
+        "dependencies": {
+          "Microsoft.NETCore.App": {
+            "target": "Package",
+            "version": "[1.0.4, )",
+            "autoReferenced": true
+          }
+        },
+        "imports": [
+          "dnxcore50"
+        ]
+      }
+    }
+  }
 }
