@@ -58,13 +58,27 @@ namespace ConsoleApplication.Facade
             }
             for (int i = 0; i < wrongCount; i++)
             {
-                if (i % 2 == 0)
+                if (minPoint == 0)
                 {
                     wrongNums.Add(random.Next(maxPoint + 1, maxPoint + 4));
                 }
                 else
                 {
-                    wrongNums.Add(random.Next(minPoint - 3, minPoint));
+                    if (i % 2 == 0)
+                    {
+                        wrongNums.Add(random.Next(maxPoint + 1, maxPoint + 4));
+                    }
+                    else
+                    {
+                        if (minPoint > 0)
+                        {
+                            wrongNums.Add(random.Next(0, minPoint));
+                        }
+                        else
+                        {
+                            wrongNums.Add(random.Next(minPoint - 3, minPoint));
+                        }
+                    }
                 }
             }
         }
