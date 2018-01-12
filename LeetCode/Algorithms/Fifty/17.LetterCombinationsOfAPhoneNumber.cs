@@ -25,7 +25,8 @@ namespace ConsoleApplication.Algorithms.Fifty
                     return;
                 }
             }
-            string temp = table[int.Parse(digtis.Substring(index,1))];
+            //string temp = table[int.Parse(digtis.Substring(index,1))];
+            string temp = table[digtis[index] - '0'];
             for (int i = 0; i < temp.Length; i++)
             {
                 string next = curr + temp[i];
