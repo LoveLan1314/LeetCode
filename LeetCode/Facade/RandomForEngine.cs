@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace ConsoleApplication.Facade
 {
-
     // while (true)
     // {
     //     Console.WriteLine("请输入最少个数:");
