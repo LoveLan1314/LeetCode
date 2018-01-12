@@ -58,7 +58,7 @@ namespace ConsoleApplication.Facade
             }
             for (int i = 0; i < wrongCount; i++)
             {
-                if (minPoint == 0)
+                if (minPoint >= 0)
                 {
                     wrongNums.Add(random.Next(maxPoint + 1, maxPoint + 4));
                 }
@@ -70,14 +70,7 @@ namespace ConsoleApplication.Facade
                     }
                     else
                     {
-                        if (minPoint > 0)
-                        {
-                            wrongNums.Add(random.Next(0, minPoint));
-                        }
-                        else
-                        {
-                            wrongNums.Add(random.Next(minPoint - 3, minPoint));
-                        }
+                        wrongNums.Add(random.Next(minPoint - 3, minPoint));
                     }
                 }
             }
