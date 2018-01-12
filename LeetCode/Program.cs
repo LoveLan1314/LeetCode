@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using ConsoleApplication.Algorithms.Fifty;
+using ConsoleApplication.Facade;
 
 namespace ConsoleApplication
 {
