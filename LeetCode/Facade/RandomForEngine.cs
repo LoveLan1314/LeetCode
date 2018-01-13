@@ -15,8 +15,8 @@ namespace ConsoleApplication.Facade
     //     int maxPoint = int.Parse(Console.ReadLine());
     //     RandomForEngine engine = new RandomForEngine(minCount, maxCount, minPoint, maxPoint);
     //     engine.Calc();
-    //     Console.WriteLine("正确点数:" + string.Join(",", engine.RigthNums));
-    //     Console.WriteLine("错误点数:" + string.Join(",", engine.WrongNums));
+    //     Console.WriteLine("正确点数:" + string.Join(",", engine.RigthNums) + "\t个数：" + engine.RigthNums.Count);
+    //     Console.WriteLine("错误点数:" + string.Join(",", engine.WrongNums) + "\t个数：" + engine.WrongNums.Count);
     //     Console.WriteLine("正确率:" + engine.Precent);
     //     Console.WriteLine("计算结束，输入q退出，回车继续");
     //     if (Console.ReadLine() == "q")
