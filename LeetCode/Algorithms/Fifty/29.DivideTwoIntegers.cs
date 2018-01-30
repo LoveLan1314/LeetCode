@@ -7,8 +7,8 @@ namespace ConsoleApplication.Algorithms.Fifty
         public int Divide(int dividend, int divisor)
         {
             if(dividend == int.MinValue && divisor == -1) return int.MaxValue;
-            long a = Math.Abs(dividend);
-            long b = Math.Abs(divisor);
+            long a = (long)Math.Abs((double)dividend);
+            long b = (long)Math.Abs((double)divisor);
             int ret = 0;
             while (a >= b)
             {
