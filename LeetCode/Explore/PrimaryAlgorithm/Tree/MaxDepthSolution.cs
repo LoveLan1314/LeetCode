@@ -17,7 +17,7 @@ namespace LeetCode.Explore.PrimaryAlgorithm.Tree
                 return deep;
             }
             deep++;
-            return Math.Max(GetTreeDepth(node.left, deep), GetTreeDepth(node.right, deep));
+            return System.Math.Max(GetTreeDepth(node.left, deep), GetTreeDepth(node.right, deep));
         }
     }
 }

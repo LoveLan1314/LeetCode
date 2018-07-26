@@ -45,8 +45,8 @@ namespace LeetCode.Explore.PrimaryAlgorithm.DynamicPlanning
 
             for (int i = 1; i < prices.Length; i++)
             {
-                max = Math.Max(max, prices[i] - low);
-                low = Math.Min(low, prices[i]);
+                max = System.Math.Max(max, prices[i] - low);
+                low = System.Math.Min(low, prices[i]);
             }
             return max;
         }

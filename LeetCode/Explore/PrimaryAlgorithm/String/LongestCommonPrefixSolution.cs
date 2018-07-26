@@ -20,7 +20,7 @@ namespace LeetCode.Explore.PrimaryAlgorithm.String
                     return "";
                 }
 
-                int len = Math.Min(prefix.Length, strs[i].Length);
+                int len = System.Math.Min(prefix.Length, strs[i].Length);
                 int j = 0;
                 for (; j < len; j++)
                 {

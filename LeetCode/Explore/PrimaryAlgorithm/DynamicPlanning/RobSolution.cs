@@ -18,11 +18,11 @@ namespace LeetCode.Explore.PrimaryAlgorithm.DynamicPlanning
             }
             int[] sum = new int[nums.Length];
             sum[0] = nums[0];
-            sum[1] = Math.Max(nums[1], nums[0]);
+            sum[1] = System.Math.Max(nums[1], nums[0]);
             int max = sum[1];
             for (int i = 2; i < nums.Length; i++)
             {
-                sum[i] = Math.Max(sum[i - 1], sum[i - 2] + nums[i]);
+                sum[i] = System.Math.Max(sum[i - 1], sum[i - 2] + nums[i]);
                 if (max < sum[i])
                 {
                     max = sum[i];

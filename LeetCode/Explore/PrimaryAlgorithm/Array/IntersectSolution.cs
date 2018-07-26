@@ -15,7 +15,7 @@ namespace LeetCode.Explore.PrimaryAlgorithm
             {
                 if (pairs2.ContainsKey(item.Key))
                 {
-                    AddItemToList(result, item.Key, Math.Min(item.Value, pairs2[item.Key]));
+                    AddItemToList(result, item.Key, System.Math.Min(item.Value, pairs2[item.Key]));
                 }
             }
             return result.ToArray();
