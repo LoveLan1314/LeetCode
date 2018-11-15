@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Explore.PrimaryAlgorithm.DynamicPlanning
+﻿namespace LeetCode.Explore.IntermediateAlgorithm.DynamicPlanning
 {
     internal class UniquePathsSolution
     {
