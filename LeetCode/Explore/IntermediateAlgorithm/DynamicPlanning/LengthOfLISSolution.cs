@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LeetCode.Explore.IntermediateAlgorithm.DynamicPlanning
 {
-    class LengthOfLISSolution
+    internal class LengthOfLISSolution
     {
         public int LengthOfLIS(int[] nums)
         {
-            if(nums.Length == 0)
+            if (nums.Length == 0)
             {
                 return 0;
             }
@@ -20,12 +18,12 @@ namespace LeetCode.Explore.IntermediateAlgorithm.DynamicPlanning
                 dp[i] = 1;
                 for (int j = 0; j < i; j++)
                 {
-                    if(nums[j] < nums[i])
+                    if (nums[j] < nums[i])
                     {
                         dp[i] = Math.Max(dp[i], dp[j] + 1);
                     }
                 }
-                if(dp[i] > max)
+                if (dp[i] > max)
                 {
                     max = dp[i];
                 }
