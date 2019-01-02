@@ -11,7 +11,7 @@ namespace LeetCode.Explore.IntermediateAlgorithm.DynamicPlanning
             List<int> dp = new List<int>() { 0 };
             for (int i = 1; i < nums.Length; i++)
             {
-                dp.Add(Math.Max(dp[i - 1], nums[i - 1]) - 1);
+                dp.Add(System.Math.Max(dp[i - 1], nums[i - 1]) - 1);
                 if (dp[i] < 0)
                 {
                     return false;
