@@ -20,7 +20,7 @@ namespace LeetCode.Explore.IntermediateAlgorithm.DynamicPlanning
                 {
                     if (nums[j] < nums[i])
                     {
-                        dp[i] = Math.Max(dp[i], dp[j] + 1);
+                        dp[i] = System.Math.Max(dp[i], dp[j] + 1);
                     }
                 }
                 if (dp[i] > max)

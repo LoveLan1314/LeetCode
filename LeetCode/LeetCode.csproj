@@ -9,6 +9,7 @@
     <PackageTargetFallback>$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <RuntimeFrameworkVersion>2.0.5</RuntimeFrameworkVersion>
     <LangVersion>latest</LangVersion>
+    <StartupObject>ConsoleApplication.Program</StartupObject>
   </PropertyGroup>
 
 </Project>

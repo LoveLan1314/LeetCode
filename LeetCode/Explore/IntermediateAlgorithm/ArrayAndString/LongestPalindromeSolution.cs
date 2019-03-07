@@ -21,7 +21,7 @@ namespace LeetCode.Explore.IntermediateAlgorithm.ArrayAndString
             int resMx = 0;
             for (int i = 1; i < t.Length; i++)
             {
-                p[i] = mx > i ? Math.Min(p[2 * id - i], mx - i) : 1;
+                p[i] = mx > i ? System.Math.Min(p[2 * id - i], mx - i) : 1;
                 while (i + p[i] < t.Length && i - p[i] > 0 && t[i + p[i]] == t[i - p[i]])
                 {
                     ++p[i];

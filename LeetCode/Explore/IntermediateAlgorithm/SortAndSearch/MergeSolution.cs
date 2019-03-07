@@ -20,7 +20,7 @@ namespace LeetCode.Explore.IntermediateAlgorithm.SortAndSearch
             {
                 if (result.Last().end >= item.start)
                 {
-                    result.Last().end = Math.Max(result.Last().end, item.end);
+                    result.Last().end = System.Math.Max(result.Last().end, item.end);
                 }
                 else
                 {
