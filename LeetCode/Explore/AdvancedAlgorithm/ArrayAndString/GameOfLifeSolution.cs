@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace LeetCode.Explore.AdvancedAlgorithm.ArrayAndString
+﻿namespace LeetCode.Explore.AdvancedAlgorithm.ArrayAndString
 {
-    class GameOfLifeSolution
+    internal class GameOfLifeSolution
     {
         //引入四种状态
         //状态0： 死细胞转为死细胞
