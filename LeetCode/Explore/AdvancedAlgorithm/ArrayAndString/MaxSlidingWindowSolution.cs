@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace LeetCode.Explore.AdvancedAlgorithm.ArrayAndString
 {
-    class MaxSlidingWindowSolution
+    internal class MaxSlidingWindowSolution
     {
         public int[] MaxSlidingWindow(int[] nums, int k)
         {
