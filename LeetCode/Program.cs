@@ -1,4 +1,4 @@
-﻿namespace ConsoleApplication
+﻿namespace LeetCode
 {
     public class Program
     {
