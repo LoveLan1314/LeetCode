@@ -1,4 +1,7 @@
-﻿namespace LeetCode
+﻿using System.Runtime.CompilerServices;
+
+[assembly: InternalsVisibleTo("LeetCode.Test")]
+namespace LeetCode
 {
     public class Program
     {
