@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.SAOA
 {
-    internal sealed class FindMinSolution
+    internal sealed class FindMinSolution2
     {
         public int FindMin(int[] nums)
         {
@@ -18,21 +18,25 @@
 
         public int FindMin2(int[] nums)
         {
-            int left = 0;
-            int right = nums.Length - 1;
-            while (left < right)
+            int low = 0;
+            int high = nums.Length - 1;
+            while (low < high)
             {
-                int middle = (left + right) / 2;
-                if (nums[middle] < nums[right])
+                int pivot = low + (high - low) / 2;
+                if (nums[pivot] < nums[high])
                 {
-                    right = middle;
+                    high = pivot;
+                }
+                else if (nums[pivot] > nums[high])
+                {
+                    low = pivot + 1;
                 }
                 else
                 {
-                    left = middle + 1;
+                    high -= 1;
                 }
             }
-            return nums[left];
+            return nums[low];
         }
     }
 }
