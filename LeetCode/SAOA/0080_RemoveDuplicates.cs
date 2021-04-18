@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.SAOA
 {
-    internal sealed class RemoveDuplicatesSolution
+    internal sealed class RemoveDuplicatesSolution2
     {
         public int RemoveDuplicates(int[] nums)
         {
