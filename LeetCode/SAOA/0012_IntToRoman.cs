@@ -5,7 +5,7 @@ namespace LeetCode.SAOA
 {
     internal sealed class IntToRomanSolution
     {
-        private readonly Tuple<int, string>[] valueSymbols = new Tuple<int, string>[]
+        private readonly Tuple<int, string>[] _valueSymbols = new Tuple<int, string>[]
         {
             new Tuple<int, string>(1000, "M"),
             new Tuple<int, string>(900, "CM"),
@@ -27,9 +27,9 @@ namespace LeetCode.SAOA
             StringBuilder sb = new StringBuilder();
             while (num > 0)
             {
-                for (int i = 0; i < valueSymbols.Length; i++)
+                for (int i = 0; i < _valueSymbols.Length; i++)
                 {
-                    var item = valueSymbols[i];
+                    var item = _valueSymbols[i];
                     if (num >= item.Item1)
                     {
                         sb.Append(item.Item2);
