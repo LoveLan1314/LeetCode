@@ -1,6 +1,6 @@
 ﻿namespace LeetCode.SAOA
 {
-    public sealed class CanEatSolution
+    internal sealed class CanEatSolution
     {
         public bool[] CanEat(int[] candiesCount, int[][] queries)
         {
