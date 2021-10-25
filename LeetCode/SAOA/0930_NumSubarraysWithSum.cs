@@ -27,7 +27,7 @@ namespace LeetCode.SAOA
             return result;
         }
 
-        public int NumSubarraysWithSum(int[] nums, int goal)
+        public int NumSubarraysWithSum2(int[] nums, int goal)
         {
             int result = 0;
             int sum = 0;
