@@ -3,7 +3,7 @@ using System.Linq;
 
 namespace LeetCode.SAOA
 {
-    internal sealed class MinOperationsSolution
+    internal sealed class MinOperationsSolution1
     {
         public int MinOperations(int[] nums, int[] numsDivide)
         {
