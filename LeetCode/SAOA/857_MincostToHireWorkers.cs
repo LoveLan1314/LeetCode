@@ -39,14 +39,21 @@ namespace LeetCode.SAOA
 
     internal class PriorityQueue<T1, T2>
     {
-        internal double Dequeue()
+        internal T1 Dequeue()
         {
             throw new NotImplementedException();
         }
 
-        internal void Enqueue(int v1, int v2)
+        internal void Enqueue(T1 v1, T2 v2)
         {
             throw new NotImplementedException();
         }
+
+        internal T1 Peek()
+        {
+            throw new NotImplementedException();
+        }
+
+        internal int Count { get; }
     }
 }
