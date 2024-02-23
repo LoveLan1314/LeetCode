@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/LeetCode.Test/LeetCode.Test.csproj",
+                "${workspaceFolder}/LeetCode/LeetCode.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/LeetCode.Test/LeetCode.Test.csproj",
+                "${workspaceFolder}/LeetCode/LeetCode.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -32,7 +32,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/LeetCode.Test/LeetCode.Test.csproj",
+                "${workspaceFolder}/LeetCode/LeetCode.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
