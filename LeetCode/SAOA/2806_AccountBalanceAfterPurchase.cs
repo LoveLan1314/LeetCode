@@ -4,14 +4,16 @@ namespace LeetCode.SAOA
     {
         public int AccountBalanceAfterPurchase(int purchaseAmount)
         {
-            if (purchaseAmount % 10 == 0)
+            int r = purchaseAmount % 10;
+            if (r < 5)
             {
-                return 100 - purchaseAmount;
+                purchaseAmount -= r;
             }
             else
             {
-                return 100 - (purchaseAmount / 10 + 1) * 10;
+                purchaseAmount += 10 - r;
             }
+            return 100 - purchaseAmount;
         }
     }
 }
